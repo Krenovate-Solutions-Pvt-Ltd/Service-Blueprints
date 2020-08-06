@@ -1,4 +1,4 @@
-site_name: Documentation Template
+site_name: Service Blueprints
 nav:
   -  Welcome:  'index.md'
 theme:

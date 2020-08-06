@@ -1,4 +1,4 @@
-# This is a sample Documentation
+# Service Blueprints
 
 If you see this, then you have successfully installed mkdocs setup and run it in your machine.
 

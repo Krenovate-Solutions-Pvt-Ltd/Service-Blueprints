@@ -6,15 +6,17 @@ Every server has a public IP address by which it is identified. For example the 
 
 
 DNS system allows you to manage multiple things through the different set of records available in the DNS system. We will discuss the most important records in the DNS, which are as follows:
->#### 1. Nameservers
 
->#### 2. A records
+>**1. Nameservers**
 
->#### 3. CNAME Records 
+>**2. A records**
 
->#### 4. MX Records
+>**3. CNAME Records** 
 
->#### 5. TXT Records
+>**4. MX Records**
+
+>**5. TXT Records**
+
 You can access the DNS records of your domain by logging into your domain management account. I generally use Godaddy to buy domains, the below image is a snapshot of the account I have at Godaddy to manage the domains I own.
 
 It has various domains bought by my organisation. If you look closely, in front of every domain name you will find a prominent button with the CTA ‘DNS’. By clicking this you will reach the DNS records of the respective domain name. 

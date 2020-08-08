@@ -2,7 +2,9 @@
 Web hosting is an online service that enables you to publish your website on the Internet. When you sign up for a web hosting service, you basically rent some space on a server where you can store all the files and data necessary for your website which can be accessed anytime through the internet to work properly.Hosting is done by the web hosts.
 
  Web hosts are companies that rent out their services and technologies to host websites on the internet. Once the hosting company hosts your website, users can access it by typing in your web address (domain name) in their web browser. When they do this, their computer connects to the server your website is hosted on.
+
  ## **Servers**
+
  Servers are machines that store and serve data on request. USB is a server, as it stores your data and when you attach it to a USB port it shows you the files and data in it. Similarly all machines that store data and serve it on request are servers.
 
 
@@ -39,6 +41,7 @@ Guidelines to select a cloud hosting provider for beginners:
 [Digital Ocean](https://www.digitalocean.com/) is a platform which has all the aforementioned guidelines for choosing a cloud hosting provider. We will also be using Digital Ocean to teach you how to setup cloud hosting for your wordpress website.
 
 >#### Step 1: Make an account on Digital Ocean
+
 1. Visit [Digital Ocean](https://www.digitalocean.com/)
 2. Use the sign up form as shown in the image below to make an account.
 ## Reminder: pdf3-image1 to be added
@@ -70,7 +73,9 @@ $5 plan, as shown in the image below and you can always upgrade as per your need
 10. IP address and a success email on the registered email ID are two things you should see and receive on the successful creation of your droplet with wordpress installed on it, as shown in the images below
 ## Reminder: pdf3-image11 to be added
 ## Reminder: pdf3-image12 to be added
+
 >#### Step 3: Change the Password For Your Droplet Server
+
 This is a very important step, to secure your cloud server and also a compulsory step after successful droplet creation. Follow the following sub-steps to successfully change password of your server.
 1. Access your droplet console, click on the 3 dots in front of your droplet name and click on console from the dropdown as shown in the image below:
 ## Reminder: pdf3-image13 to be added
@@ -82,7 +87,9 @@ and password in your registered email id, as shown in the image below:
 ## Reminder: pdf3-image15 to be added
 4. Exit the console after you see that you have successfully logged into your server. The screen will display a message like shown in the image below:
 ## Reminder: pdf3-image16 to be added
+
 >#### Step 4: Complete the wordpress installation on your droplet (Server) by following the steps below
+
 1. Choose Wordpress Language. Open the IP address of your new droplet in Google Chrome or any other browser and select the language in which you would like to manage your wordpress website as shown in the image below
 ## Reminder: pdf3-image17 to be added
 2. Enter basic details and click on ‘Install’ to complete Wordpress installation on your droplet, as shown in the image below

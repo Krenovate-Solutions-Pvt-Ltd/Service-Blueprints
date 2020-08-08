@@ -42,60 +42,94 @@ Guidelines to select a cloud hosting provider for beginners:
 
 >#### Step 1: Make an account on Digital Ocean
 
-1. Visit [Digital Ocean](https://www.digitalocean.com/)
-2. Use the sign up form as shown in the image below to make an account.
-## Reminder: pdf3-image1 to be added
+-  Visit [Digital Ocean](https://www.digitalocean.com/)
+-  Use the sign up form as shown in the image below to make an account.
+
+![11](images/pdf3-image1.jpg)
 
 >#### Step 2: Create a Droplet (Cloud Hosted Server) with One-click Wordpress Installation  
 
 
-1. Log in and click the ‘CREATE’ button and choose ‘DROPLETS’ in the dropdown as shown
+-  Log in and click the ‘CREATE’ button and choose ‘DROPLETS’ in the dropdown as shown
 in the image below.
-## Reminder: pdf3-image2 to be added
-2. Click on ‘Marketplace’ which has all the options for one-click installations as shown in the image below.
-## Reminder: pdf3-image3 to be added
-3. Choose the option of ‘WORDPRESS’ from the list in the marketplace, it will be at the end
+
+![12](images/pdf3-image2.jpg)
+
+-  Click on ‘Marketplace’ which has all the options for one-click installations as shown in the image below.
+
+![13](images/pdf3-image3.jpg)
+
+-  Choose the option of ‘WORDPRESS’ from the list in the marketplace, it will be at the end
 of the list as shown in the image below.
-## Reminder: pdf3-image4 to be added
-4. Choose a ‘STANDARD’ plan it’s good enough for any wordpress business website, and select the pricing plan from the available plans, I would suggest you to go get started with
+
+![14](images/pdf3-image4.jpg)
+
+-  Choose a ‘STANDARD’ plan it’s good enough for any wordpress business website, and select the pricing plan from the available plans, I would suggest you to go get started with
 $5 plan, as shown in the image below and you can always upgrade as per your needs.
-## Reminder: pdf3-image5 to be added
-5. Leave the Backup and Block Storage sections as default, as shown in the image below.
-## Reminder: pdf3-image6 to be added
-6. Choose a ‘DATACENTER’, this step is important. You should always choose a datacenter which is geographically nearest to your prospective customers. For example, if you are building a website for users who stay in India, you should select ‘Bangalore’ as a datacenter. Having a datacenter in the same country helps to serve data more quickly to the people visiting the website, making your website experience better for your website visitors.
-## Reminder: pdf3-image7 to be added
-7. Name Your Droplet, and Finally Click on ‘CREATE’ as shown in the image below
-## Reminder: pdf3-image8 to be added
-8. Name Your Droplet, and Finally Click on ‘CREATE’ as shown in the image below
-## Reminder: pdf3-image9 to be added
-9. Droplet creation loader is visible on your dashboard and only takes a few seconds to be created as shown in the image below
-## Reminder: pdf3-image10 to be added
-10. IP address and a success email on the registered email ID are two things you should see and receive on the successful creation of your droplet with wordpress installed on it, as shown in the images below
-## Reminder: pdf3-image11 to be added
-## Reminder: pdf3-image12 to be added
+
+![15](images/pdf3-image5.jpg)
+
+-  Leave the Backup and Block Storage sections as default, as shown in the image below.
+
+![16](images/pdf3-image6.jpg)
+
+-  Choose a ‘DATACENTER’, this step is important. You should always choose a datacenter which is geographically nearest to your prospective customers. For example, if you are building a website for users who stay in India, you should select ‘Bangalore’ as a datacenter. Having a datacenter in the same country helps to serve data more quickly to the people visiting the website, making your website experience better for your website visitors.
+
+![17](images/pdf3-image7.jpg)
+
+-  Name Your Droplet, and Finally Click on ‘CREATE’ as shown in the image below
+
+![18](images/pdf3-image8.jpg)
+
+-  Name Your Droplet, and Finally Click on ‘CREATE’ as shown in the image below
+
+![19](images/pdf3-image9.jpg)
+
+-  Droplet creation loader is visible on your dashboard and only takes a few seconds to be created as shown in the image below
+
+![20](images/pdf3-image10.jpg)
+
+-  IP address and a success email on the registered email ID are two things you should see and receive on the successful creation of your droplet with wordpress installed on it, as shown in the images below
+
+![21](images/pdf3-image11.jpg)
+
+![22](images/pdf3-image12.jpg)
 
 >#### Step 3: Change the Password For Your Droplet Server
 
 This is a very important step, to secure your cloud server and also a compulsory step after successful droplet creation. Follow the following sub-steps to successfully change password of your server.
-1. Access your droplet console, click on the 3 dots in front of your droplet name and click on console from the dropdown as shown in the image below:
-## Reminder: pdf3-image13 to be added
+-  Access your droplet console, click on the 3 dots in front of your droplet name and click on console from the dropdown as shown in the image below:
 
-2. Enter your username (root) on the console screen, you would have received a username
+![23](images/pdf3-image13.jpg)
+
+-  Enter your username (root) on the console screen, you would have received a username
 and password in your registered email id, as shown in the image below:
-## Reminder: pdf3-image14 to be added
-3. Enter your password, and the system will automatically tell you to create a new password and confirm the same as shown in the image below. Please note that whatever you type in the password field is not visible for security reasons. So please type carefully and do not forget the new password you create on this step.
-## Reminder: pdf3-image15 to be added
-4. Exit the console after you see that you have successfully logged into your server. The screen will display a message like shown in the image below:
-## Reminder: pdf3-image16 to be added
+
+![24](images/pdf3-image14.png)
+
+-  Enter your password, and the system will automatically tell you to create a new password and confirm the same as shown in the image below. Please note that whatever you type in the password field is not visible for security reasons. So please type carefully and do not forget the new password you create on this step.
+
+![25](images/pdf3-image15.png)
+
+-  Exit the console after you see that you have successfully logged into your server. The screen will display a message like shown in the image below:
+
+![26](images/pdf3-image16.png)
 
 >#### Step 4: Complete the wordpress installation on your droplet (Server) by following the steps below
 
-1. Choose Wordpress Language. Open the IP address of your new droplet in Google Chrome or any other browser and select the language in which you would like to manage your wordpress website as shown in the image below
-## Reminder: pdf3-image17 to be added
-2. Enter basic details and click on ‘Install’ to complete Wordpress installation on your droplet, as shown in the image below
-## Reminder: pdf3-image18 to be added
-3. Wordpress successfully installed screen should be visible to you, as shown in the image below
-## Reminder: pdf3-image19 to be added
-4. Open your new wordpress website by visiting the IP address in a browser, your new fresh
+-  Choose Wordpress Language. Open the IP address of your new droplet in Google Chrome or any other browser and select the language in which you would like to manage your wordpress website as shown in the image below
+
+![27](images/pdf3-image17.jpg)
+
+-  Enter basic details and click on ‘Install’ to complete Wordpress installation on your droplet, as shown in the image below
+
+![28](images/pdf3-image18.jpg)
+
+-  Wordpress successfully installed screen should be visible to you, as shown in the image below
+
+![29](images/pdf3-image19.jpg)
+
+-  Open your new wordpress website by visiting the IP address in a browser, your new fresh
 wordpress website should look like as shown below:
-## Reminder: pdf3-image20 to be added
+
+![30](images/pdf3-image20.jpg)

@@ -11,10 +11,13 @@ A URL has four major parts:
 
 >**1. HTTPS / HTTP**
 
+<!-- -->
 >**2. TLD** 
 
+<!-- -->
 >**3. Domain** 
 
+<!-- -->
 >**4. Sub Domain**
 
 ### **1. HTTPS/HTTP** 
@@ -36,10 +39,14 @@ And this encryption changes every time you enter any data on any HTTPS website.
     Data entered: 1234 5678 9999 0000    
     Data saved as: nhnkqoayhgqlabgjmcieioegebsksbshs8782n9dybsjsi8eyey920jsn
 Needless to say that you should avoid sharing any confidential data on a HTTP website. Also Google Chrome to safeguard and make people aware about non secure websites using HTTP only has started writing ‘unsecure’ just before their URL. Look at the image.
-## Reminder: pdf1-image1 to be added
+
+![1](images/pdf1-image1.jpg)
+
 While websites using SSL certificate are marked as safe by Google Chrome, look at
 the following image.
-## Reminder: pdf1-image2 to be added
+
+![2](images/pdf1-image2.jpg)
+
 ### **2. TLD**
 Also known as the **top-level domain**. The most common used TLD is ‘.com’. TLDs are generally used as a reference to a geographic area or a type of community, group, organisation. For example, *‘.com.au’* will reflect that the website is run by an Australian organisation, similarly
 *‘.edu’* is a TLD generally used by colleges, schools and educational institutes.
@@ -61,6 +68,7 @@ Also there are some TLDs available which directly represent a business category,
 
 >**[TLD's used in world](http://data.iana.org/TLD/tlds-alpha-by-domain.txt)**
 
+<!-- -->
 >**[Top 10 used TLDs in the world](link)**
 
 ### **3. Domain**

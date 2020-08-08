@@ -1,0 +1,988 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Domains - Service Blueprints</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Inter",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#domain" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Service Blueprints" class="md-header-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Service Blueprints
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Domains
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Service Blueprints" class="md-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Service Blueprints
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Domains and hosting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Domains and hosting" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Domains and hosting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Domains
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Domains" class="md-nav__link md-nav__link--active">
+      Domains
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-name" class="md-nav__link">
+    Domain Name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    URL
+  </a>
+  
+    <nav class="md-nav" aria-label="URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-https-http" class="md-nav__link">
+    1. HTTPS / HTTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tld" class="md-nav__link">
+    2. TLD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-domain" class="md-nav__link">
+    3. Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sub-domain" class="md-nav__link">
+    4. Sub Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-httpshttp" class="md-nav__link">
+    1. HTTPS/HTTP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-vs-https" class="md-nav__link">
+    HTTP vs HTTPS
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP vs HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-no-encryption" class="md-nav__link">
+    HTTP (No encryption)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-encryption-through-ssl-certificates" class="md-nav__link">
+    HTTPS (Encryption through SSL certificates)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf1-image1-to-be-added" class="md-nav__link">
+    Reminder: pdf1-image1 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf1-image2-to-be-added" class="md-nav__link">
+    Reminder: pdf1-image2 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf1-image2 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-tld_1" class="md-nav__link">
+    2. TLD
+  </a>
+  
+    <nav class="md-nav" aria-label="2. TLD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-com-8201-million" class="md-nav__link">
+    1) .COM: 82.01 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-de-germany-1305-million" class="md-nav__link">
+    2) .DE (Germany): 13.05 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cn-china-1255-million" class="md-nav__link">
+    3) .CN (China): 12.55 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-net-1242-million" class="md-nav__link">
+    4) .NET: 12.42 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-uk-united-kingdom-783-million" class="md-nav__link">
+    5) .UK (United Kingdom): 7.83 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-org-779-million" class="md-nav__link">
+    6) .ORG: 7.79 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-info-524-million" class="md-nav__link">
+    7) .INFO: 5.24 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-nl-netherlands-35-million" class="md-nav__link">
+    8) .NL (Netherlands): 3.5 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-eu-european-union-298-million" class="md-nav__link">
+    9) .EU (European Union): 2.98 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ru-russia-231-million" class="md-nav__link">
+    10) .RU (Russia): 2.31 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tlds-used-in-world" class="md-nav__link">
+    TLD's used in world
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-10-used-tlds-in-the-world" class="md-nav__link">
+    Top 10 used TLDs in the world
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-domain_1" class="md-nav__link">
+    3. Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sub-domains" class="md-nav__link">
+    3. Sub Domains
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Sub Domains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-specific-website-for-specific-stakeholders" class="md-nav__link">
+    1. Specific website for specific stakeholders.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-easy-to-regulate-and-manage-content-and-information-for-a-specific-set-of-users" class="md-nav__link">
+    2. Easy to regulate and manage content and information for a specific set of users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-performance-of-one-website-does-not-affect-the-other-so-if-one-of-the-subdomain-crashes-the-others-wont-get-affected-if-all-our-hosted-on-separate-servers" class="md-nav__link">
+    3. Performance of one website does not affect the other, so if one of the subdomain crashes, the others won’t get affected (if all our hosted on separate servers)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-designing-and-planning-a-website-becomes-more-easy-and-sensible" class="md-nav__link">
+    4. Designing and planning a website becomes more easy and sensible.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-all-subdomains-can-eventually-run-as-individual-entities" class="md-nav__link">
+    5. All subdomains can eventually run as individual entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-good-for-organisations-which-deal-with-seperate-kind-of-stakeholders" class="md-nav__link">
+    6. Good for organisations which deal with seperate kind of stakeholders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DNS/" title="Domains Name System (DNS)" class="md-nav__link">
+      Domains Name System (DNS)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Hosting/" title="Hosting" class="md-nav__link">
+      Hosting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#domain-name" class="md-nav__link">
+    Domain Name
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url" class="md-nav__link">
+    URL
+  </a>
+  
+    <nav class="md-nav" aria-label="URL">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-https-http" class="md-nav__link">
+    1. HTTPS / HTTP
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tld" class="md-nav__link">
+    2. TLD
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-domain" class="md-nav__link">
+    3. Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-sub-domain" class="md-nav__link">
+    4. Sub Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-httpshttp" class="md-nav__link">
+    1. HTTPS/HTTP
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#http-vs-https" class="md-nav__link">
+    HTTP vs HTTPS
+  </a>
+  
+    <nav class="md-nav" aria-label="HTTP vs HTTPS">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-no-encryption" class="md-nav__link">
+    HTTP (No encryption)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#https-encryption-through-ssl-certificates" class="md-nav__link">
+    HTTPS (Encryption through SSL certificates)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf1-image1-to-be-added" class="md-nav__link">
+    Reminder: pdf1-image1 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf1-image2-to-be-added" class="md-nav__link">
+    Reminder: pdf1-image2 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf1-image2 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-tld_1" class="md-nav__link">
+    2. TLD
+  </a>
+  
+    <nav class="md-nav" aria-label="2. TLD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-com-8201-million" class="md-nav__link">
+    1) .COM: 82.01 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-de-germany-1305-million" class="md-nav__link">
+    2) .DE (Germany): 13.05 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-cn-china-1255-million" class="md-nav__link">
+    3) .CN (China): 12.55 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-net-1242-million" class="md-nav__link">
+    4) .NET: 12.42 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-uk-united-kingdom-783-million" class="md-nav__link">
+    5) .UK (United Kingdom): 7.83 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-org-779-million" class="md-nav__link">
+    6) .ORG: 7.79 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-info-524-million" class="md-nav__link">
+    7) .INFO: 5.24 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8-nl-netherlands-35-million" class="md-nav__link">
+    8) .NL (Netherlands): 3.5 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9-eu-european-union-298-million" class="md-nav__link">
+    9) .EU (European Union): 2.98 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10-ru-russia-231-million" class="md-nav__link">
+    10) .RU (Russia): 2.31 million
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tlds-used-in-world" class="md-nav__link">
+    TLD's used in world
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#top-10-used-tlds-in-the-world" class="md-nav__link">
+    Top 10 used TLDs in the world
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-domain_1" class="md-nav__link">
+    3. Domain
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-sub-domains" class="md-nav__link">
+    3. Sub Domains
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Sub Domains">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-specific-website-for-specific-stakeholders" class="md-nav__link">
+    1. Specific website for specific stakeholders.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-easy-to-regulate-and-manage-content-and-information-for-a-specific-set-of-users" class="md-nav__link">
+    2. Easy to regulate and manage content and information for a specific set of users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-performance-of-one-website-does-not-affect-the-other-so-if-one-of-the-subdomain-crashes-the-others-wont-get-affected-if-all-our-hosted-on-separate-servers" class="md-nav__link">
+    3. Performance of one website does not affect the other, so if one of the subdomain crashes, the others won’t get affected (if all our hosted on separate servers)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-designing-and-planning-a-website-becomes-more-easy-and-sensible" class="md-nav__link">
+    4. Designing and planning a website becomes more easy and sensible.
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-all-subdomains-can-eventually-run-as-individual-entities" class="md-nav__link">
+    5. All subdomains can eventually run as individual entities
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-good-for-organisations-which-deal-with-seperate-kind-of-stakeholders" class="md-nav__link">
+    6. Good for organisations which deal with seperate kind of stakeholders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="domain"><strong>Domain</strong><a class="headerlink" href="#domain" title="Permanent link">&para;</a></h1>
+<h2 id="domain-name"><strong>Domain Name</strong><a class="headerlink" href="#domain-name" title="Permanent link">&para;</a></h2>
+<p>A domain name is your website name. A domain name is the address where internet users can access your website. A domain name is used for finding and identifying computers on the Internet. Computers use IP addresses, which are a series of number. However, it is difficult for humans to remember strings of numbers. Because of this, domain names were developed and used to identify entities on the Internet rather than using IP addresses.</p>
+<p>A domain name can be any combination of letters and numbers, and it can be used in combination of the various domain name extensions, such as .com, .net and more.</p>
+<p>The domain name must be registered before you can use it. Every domain name is unique. No two websites can have the same domain name. For example if someone types in krenovate.com, it will go to Krenovate's website and no one else's.</p>
+<h2 id="url"><strong>URL</strong><a class="headerlink" href="#url" title="Permanent link">&para;</a></h2>
+<p>A URL (<em>“Uniform Resource Locator”</em>) is a complete web address used to reach a particular web destination.
+A URL has four major parts:</p>
+<blockquote>
+<h4 id="1-https-http"><strong>1. HTTPS / HTTP</strong><a class="headerlink" href="#1-https-http" title="Permanent link">&para;</a></h4>
+<h4 id="2-tld"><strong>2. TLD</strong><a class="headerlink" href="#2-tld" title="Permanent link">&para;</a></h4>
+<h4 id="3-domain"><strong>3. Domain</strong><a class="headerlink" href="#3-domain" title="Permanent link">&para;</a></h4>
+<h4 id="4-sub-domain"><strong>4. Sub Domain</strong><a class="headerlink" href="#4-sub-domain" title="Permanent link">&para;</a></h4>
+</blockquote>
+<h3 id="1-httpshttp"><strong>1. HTTPS/HTTP</strong><a class="headerlink" href="#1-httpshttp" title="Permanent link">&para;</a></h3>
+<p>You should capture email IDs using simple sign up forms for newsletter of your company for all the people visiting your website. People who will be interested in your products or services will sign up, as they might be interested to get regular updates about your business. </p>
+<p>The internet has over 1.5 billion websites, the information and data on each website is fetched and presented to you by the <strong>HTTP</strong> (<em>Hyper transfer text protocol</em>) technology that is as old as the internet. The <strong>HTTPS</strong> (<em>Hyper transfer text protocol secure</em>) is a more secure way of fetching &amp; presenting data and information on websites. </p>
+<p>The data and information on HTTPS websites is encrypted using <em>SSL certificates</em>. These certificates convert any data or information in an encrypted format, so that even if someone gets access to some confidential information data from the website it is an encrypted format and no one can perform any scam or fraud online by using such information. To give you a simple example, when you buy anything online by entering your credit card details, e-commerce websites use SSL certificates to convert the data you have entered to be saved in an encrypted format, so that no one can use your credit card details to do some fraud online shopping or scammy online purchases.</p>
+<p>Let’s say you entered your credit card number as 
+<strong>1234 5678 9999 0000</strong>,
+all HTTPS websites will convert this data into an encrypted format like <strong>‘kjbdy87343hkdh873837864hdwsdtrsdwte72328627362876826vsjhdwud67e228736287632’</strong> And this encryption changes every time you enter any data on any HTTPS website.</p>
+<h2 id="http-vs-https"><strong>HTTP vs HTTPS</strong><a class="headerlink" href="#http-vs-https" title="Permanent link">&para;</a></h2>
+<h4 id="http-no-encryption"><strong>HTTP</strong> (<em>No encryption</em>)<a class="headerlink" href="#http-no-encryption" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>Data entered: 1234 5678 9999 0000   
+Data saved as: 1234 5678 9999 0000
+</code></pre></div>
+
+
+<h4 id="https-encryption-through-ssl-certificates"><strong>HTTPS</strong> (<em>Encryption through SSL certificates</em>)<a class="headerlink" href="#https-encryption-through-ssl-certificates" title="Permanent link">&para;</a></h4>
+<div class="codehilite"><pre><span></span><code>Data entered: 1234 5678 9999 0000    
+Data saved as: nhnkqoayhgqlabgjmcieioegebsksbshs8782n9dybsjsi8eyey920jsn
+</code></pre></div>
+
+
+<p>Needless to say that you should avoid sharing any confidential data on a HTTP website. Also Google Chrome to safeguard and make people aware about non secure websites using HTTP only has started writing ‘unsecure’ just before their URL. Look at the image.</p>
+<h2 id="reminder-pdf1-image1-to-be-added">Reminder: pdf1-image1 to be added<a class="headerlink" href="#reminder-pdf1-image1-to-be-added" title="Permanent link">&para;</a></h2>
+<p>While websites using SSL certificate are marked as safe by Google Chrome, look at
+the following image.</p>
+<h2 id="reminder-pdf1-image2-to-be-added">Reminder: pdf1-image2 to be added<a class="headerlink" href="#reminder-pdf1-image2-to-be-added" title="Permanent link">&para;</a></h2>
+<h3 id="2-tld_1"><strong>2. TLD</strong><a class="headerlink" href="#2-tld_1" title="Permanent link">&para;</a></h3>
+<p>Also known as the <strong>top-level domain</strong>. The most common used TLD is ‘.com’. TLDs are generally used as a reference to a geographic area or a type of community, group, organisation. For example, <em>‘.com.au’</em> will reflect that the website is run by an Australian organisation, similarly
+<em>‘.edu’</em> is a TLD generally used by colleges, schools and educational institutes.</p>
+<p>There are more than 1,000 TLDs available in the world. The following are the top 10 used TLDs in the world:</p>
+<h4 id="1-com-8201-million">1) .COM: 82.01 million<a class="headerlink" href="#1-com-8201-million" title="Permanent link">&para;</a></h4>
+<h4 id="2-de-germany-1305-million">2) .DE (Germany): 13.05 million<a class="headerlink" href="#2-de-germany-1305-million" title="Permanent link">&para;</a></h4>
+<h4 id="3-cn-china-1255-million">3) .CN (China): 12.55 million<a class="headerlink" href="#3-cn-china-1255-million" title="Permanent link">&para;</a></h4>
+<h4 id="4-net-1242-million">4) .NET: 12.42 million<a class="headerlink" href="#4-net-1242-million" title="Permanent link">&para;</a></h4>
+<h4 id="5-uk-united-kingdom-783-million">5) .UK (United Kingdom): 7.83 million<a class="headerlink" href="#5-uk-united-kingdom-783-million" title="Permanent link">&para;</a></h4>
+<h4 id="6-org-779-million">6) .ORG: 7.79 million<a class="headerlink" href="#6-org-779-million" title="Permanent link">&para;</a></h4>
+<h4 id="7-info-524-million">7) .INFO: 5.24 million<a class="headerlink" href="#7-info-524-million" title="Permanent link">&para;</a></h4>
+<h4 id="8-nl-netherlands-35-million">8) .NL (Netherlands): 3.5 million<a class="headerlink" href="#8-nl-netherlands-35-million" title="Permanent link">&para;</a></h4>
+<h4 id="9-eu-european-union-298-million">9) .EU (European Union): 2.98 million<a class="headerlink" href="#9-eu-european-union-298-million" title="Permanent link">&para;</a></h4>
+<h4 id="10-ru-russia-231-million">10) .RU (Russia): 2.31 million<a class="headerlink" href="#10-ru-russia-231-million" title="Permanent link">&para;</a></h4>
+<p>So if you are launching a website for a business in Europe it makes more sense to launch it under the <em>.EU TLD</em>, because people in europe would be more accustomed to open websites with <em>.EU TLD</em>.
+Also there are some TLDs available which directly represent a business category, like the
+<em>.AGENCY TLD</em>, so if you are planning to open up an agency for any industry, it makes more sense to buy a domain name under the <em>.AGENCY TLD</em>.</p>
+<blockquote>
+<h4 id="tlds-used-in-world"><a href="http://data.iana.org/TLD/tlds-alpha-by-domain.txt">TLD's used in world</a><a class="headerlink" href="#tlds-used-in-world" title="Permanent link">&para;</a></h4>
+<h4 id="top-10-used-tlds-in-the-world"><a href="link">Top 10 used TLDs in the world</a><a class="headerlink" href="#top-10-used-tlds-in-the-world" title="Permanent link">&para;</a></h4>
+</blockquote>
+<h3 id="3-domain_1"><strong>3. Domain</strong><a class="headerlink" href="#3-domain_1" title="Permanent link">&para;</a></h3>
+<p>Kickstarting any business online with a website starts with a booking a domain name. Once you have shortlisted the right TLDs based on your business/organisation category the next step is to search and book the domain name for your online business. You should follow the following guidelines to book a domain name for your business.</p>
+<ol>
+<li>Shortlist relevant TLDs</li>
+<li>Prefer a single word for your domain name</li>
+<li>For example the official name of my organisation is ‘<strong>Krenovate Solutions Pvt Ltd</strong>’ but the website runs under the brand name ‘<em>Krenovate.com</em>’</li>
+<li>‘Godaddy’ does not have all TLDs available, book domains on 
+<a href="https://www.uniteddomains.com/">United Domains</a></li>
+<li>Book your domain name for extra TLDs (like .co, .co.in, .xyz, .work etc.), which are not very expensive, this will be helpful for bulk email marketing.</li>
+</ol>
+<h3 id="3-sub-domains"><strong>3. Sub Domains</strong><a class="headerlink" href="#3-sub-domains" title="Permanent link">&para;</a></h3>
+<p>Apple has a very beautiful website, that anyone can visit by typing in the given 
+<a href="https://www.apple.com/">Apple link</a>
+ for buying and finding information for all Apple products. On the other hand, customers of Apple, if they want any help or support for their old purchases have to visit <a href="https://support.apple.com/">Apple customer support link</a>.
+Both websites (<a href="https://www.apple.com/">https://www.apple.com/</a>) which is referred to as <a href="https://www.apple.com/">Apple link</a> here and(<a href="https://support.apple.com/)which">https://support.apple.com/)which</a> is referred to as <a href="https://support.apple.com/">Apple customer support link</a> in this section run on the same domain name i.e. apple.com. These are actually two different websites for different set of users. Visitors of Apple.com and support.apple.com are absolutely different.Prospect or any person who wants to find out any information about Apple visits the main website <a href="https://www.apple.com/">Apple link</a>, while registered customers of Apple visit  <a href="https://support.apple.com/">Apple customer support link</a> which is a subdomain of Apple.com for help and support on products and services.</p>
+<p>Any person/organisation who has bought a domain name can create an unlimited number of subdomains without any extra cost. Subdomains help organisations to manage a similar set of users access relevant information on a separate independent website. Subdomains have the following advantages:</p>
+<blockquote>
+<h4 id="1-specific-website-for-specific-stakeholders">1. Specific website for specific stakeholders.<a class="headerlink" href="#1-specific-website-for-specific-stakeholders" title="Permanent link">&para;</a></h4>
+<h4 id="2-easy-to-regulate-and-manage-content-and-information-for-a-specific-set-of-users">2. Easy to regulate and manage content and information for a specific set of users<a class="headerlink" href="#2-easy-to-regulate-and-manage-content-and-information-for-a-specific-set-of-users" title="Permanent link">&para;</a></h4>
+<h4 id="3-performance-of-one-website-does-not-affect-the-other-so-if-one-of-the-subdomain-crashes-the-others-wont-get-affected-if-all-our-hosted-on-separate-servers">3. Performance of one website does not affect the other, so if one of the subdomain crashes, the others won’t get affected (if all our hosted on separate servers)<a class="headerlink" href="#3-performance-of-one-website-does-not-affect-the-other-so-if-one-of-the-subdomain-crashes-the-others-wont-get-affected-if-all-our-hosted-on-separate-servers" title="Permanent link">&para;</a></h4>
+<h4 id="4-designing-and-planning-a-website-becomes-more-easy-and-sensible">4. Designing and planning a website becomes more easy and sensible.<a class="headerlink" href="#4-designing-and-planning-a-website-becomes-more-easy-and-sensible" title="Permanent link">&para;</a></h4>
+<h4 id="5-all-subdomains-can-eventually-run-as-individual-entities">5. All subdomains can eventually run as individual entities<a class="headerlink" href="#5-all-subdomains-can-eventually-run-as-individual-entities" title="Permanent link">&para;</a></h4>
+<h4 id="6-good-for-organisations-which-deal-with-seperate-kind-of-stakeholders">6. Good for organisations which deal with seperate kind of stakeholders<a class="headerlink" href="#6-good-for-organisations-which-deal-with-seperate-kind-of-stakeholders" title="Permanent link">&para;</a></h4>
+<p>Please remember, creating subdomains for different products or services is not beneficial as subdomains are only helpful if you have multiple stakeholders. To be more clear, create subdomains only if you have different stakeholders like customers, vendors, suppliers, employees and prospective customers and that too if you cannot handle them on a single website.</p>
+</blockquote>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: August 8, 2020
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+        
+          <a href="../DNS/" title="Domains Name System (DNS)" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Domains Name System (DNS)
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

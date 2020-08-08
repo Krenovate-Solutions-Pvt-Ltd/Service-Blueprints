@@ -1,0 +1,938 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Hosting - Service Blueprints</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Inter",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#hosting" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Service Blueprints" class="md-header-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Service Blueprints
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Hosting
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Service Blueprints" class="md-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Service Blueprints
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      Domains and hosting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Domains and hosting" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Domains and hosting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Domains/" title="Domains" class="md-nav__link">
+      Domains
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../DNS/" title="Domains Name System (DNS)" class="md-nav__link">
+      Domains Name System (DNS)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Hosting
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Hosting" class="md-nav__link md-nav__link--active">
+      Hosting
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-cloud-hosting-for-wordpress-websites" class="md-nav__link">
+    Setting Up Cloud Hosting for Wordpress Websites
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Cloud Hosting for Wordpress Websites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-make-an-account-on-digital-ocean" class="md-nav__link">
+    Step 1: Make an account on Digital Ocean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image1-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image1 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf3-image1 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-droplet-cloud-hosted-server-with-one-click-wordpress-installation" class="md-nav__link">
+    Step 2: Create a Droplet (Cloud Hosted Server) with One-click Wordpress Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image2-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image2 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image3-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image3 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image4-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image4 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image5-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image5 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image6-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image6 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image7-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image7 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image8-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image8 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image9-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image9 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image10-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image10 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image11-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image11 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image12-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image12 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf3-image12 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-3-change-the-password-for-your-droplet-server" class="md-nav__link">
+    Step 3: Change the Password For Your Droplet Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image13-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image13 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image14-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image14 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image15-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image15 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image16-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image16 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf3-image16 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-4-complete-the-wordpress-installation-on-your-droplet-server-by-following-the-steps-below" class="md-nav__link">
+    Step 4: Complete the wordpress installation on your droplet (Server) by following the steps below
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image17-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image17 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image18-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image18 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image19-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image19 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image20-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image20 to be added
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#setting-up-cloud-hosting-for-wordpress-websites" class="md-nav__link">
+    Setting Up Cloud Hosting for Wordpress Websites
+  </a>
+  
+    <nav class="md-nav" aria-label="Setting Up Cloud Hosting for Wordpress Websites">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-1-make-an-account-on-digital-ocean" class="md-nav__link">
+    Step 1: Make an account on Digital Ocean
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image1-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image1 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf3-image1 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-2-create-a-droplet-cloud-hosted-server-with-one-click-wordpress-installation" class="md-nav__link">
+    Step 2: Create a Droplet (Cloud Hosted Server) with One-click Wordpress Installation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image2-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image2 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image3-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image3 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image4-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image4 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image5-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image5 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image6-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image6 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image7-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image7 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image8-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image8 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image9-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image9 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image10-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image10 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image11-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image11 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image12-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image12 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf3-image12 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-3-change-the-password-for-your-droplet-server" class="md-nav__link">
+    Step 3: Change the Password For Your Droplet Server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image13-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image13 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image14-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image14 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image15-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image15 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image16-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image16 to be added
+  </a>
+  
+    <nav class="md-nav" aria-label="Reminder: pdf3-image16 to be added">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-4-complete-the-wordpress-installation-on-your-droplet-server-by-following-the-steps-below" class="md-nav__link">
+    Step 4: Complete the wordpress installation on your droplet (Server) by following the steps below
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image17-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image17 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image18-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image18 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image19-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image19 to be added
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reminder-pdf3-image20-to-be-added" class="md-nav__link">
+    Reminder: pdf3-image20 to be added
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="hosting"><strong>Hosting</strong><a class="headerlink" href="#hosting" title="Permanent link">&para;</a></h1>
+<p>Web hosting is an online service that enables you to publish your website on the Internet. When you sign up for a web hosting service, you basically rent some space on a server where you can store all the files and data necessary for your website which can be accessed anytime through the internet to work properly.Hosting is done by the web hosts.</p>
+<p>Web hosts are companies that rent out their services and technologies to host websites on the internet. Once the hosting company hosts your website, users can access it by typing in your web address (domain name) in their web browser. When they do this, their computer connects to the server your website is hosted on.
+ ## <strong>Servers</strong>
+ Servers are machines that store and serve data on request. USB is a server, as it stores your data and when you attach it to a USB port it shows you the files and data in it. Similarly all machines that store data and serve it on request are servers.</p>
+<p>Servers can be online and offline. Offline servers are your laptop, USB, mobile phones and anything that shows you data without using the internet. Online servers are similar machines which store information and data and are only accessible through the internet.</p>
+<p>Online servers are provided by hosting providers, companies which are in the business of creating and managing online servers. For example, Godaddy is a hosting provider that offers a range of different types of online servers that you can use to store and run your websites
+and apps. All online servers have an IP address, which is used to access the information on that
+server.</p>
+<table>
+<thead>
+<tr>
+<th align="left"><strong>Shared Hosting</strong></th>
+<th align="left"><strong>Cloud Hosting</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left"><strong>1.</strong> Multiple websites are hosted on a single server.</td>
+<td align="left"><strong>1.</strong> Dedicated individual server<br>for each website.</td>
+</tr>
+<tr>
+<td align="left"><strong>2.</strong> All websites have a<br>common IP address.</td>
+<td align="left"><strong>2.</strong> Each website has an exclusive<br>IP address.</td>
+</tr>
+<tr>
+<td align="left"><strong>3.</strong> If the server crashes, all websites <br>go down together.</td>
+<td align="left"><strong>3.</strong> If the server crashes, only the website<br>hosted on it crashes, does not affect other websites.</td>
+</tr>
+<tr>
+<td align="left"><strong>4.</strong> If you buy shared hosting, you <br>get server space in a server that is also being used for other websites.</td>
+<td align="left"><strong>4.</strong> If you buy cloud hosting, you get server<br> space in a dedicated server that is exclusively being used for only your website.</td>
+</tr>
+<tr>
+<td align="left"><strong>5.</strong> You cannot make any technical changes to the server as it is shared.</td>
+<td align="left"><strong>5.</strong> You can make whatever technical<br>changes you want to perform in your cloud server.</td>
+</tr>
+<tr>
+<td align="left"><strong>6.</strong>  Good for simple business websites</td>
+<td align="left"><strong>6.</strong> Good for e-commerce and product based websites.</td>
+</tr>
+<tr>
+<td align="left"><strong>7.</strong> Prices are generally affordable and cheap.</td>
+<td align="left"><strong>7.</strong> Prices are dynamic based on server usage, they go up with the no. of users on your website.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="setting-up-cloud-hosting-for-wordpress-websites"><strong>Setting Up Cloud Hosting for Wordpress Websites</strong><a class="headerlink" href="#setting-up-cloud-hosting-for-wordpress-websites" title="Permanent link">&para;</a></h2>
+<p>Since we will be training you for website design &amp; development ahead in the course on wordpress websites, we will teach you how you can quickly setup hosting for your wordpress website.</p>
+<p>Guidelines to select a cloud hosting provider for beginners:</p>
+<ul>
+<li>
+<p>Choose a provider where setting up a server is easy.</p>
+</li>
+<li>
+<p>Options like one-click installs are available.</p>
+</li>
+<li>
+<p>Pricing has definite plans with fixed pricing per month.</p>
+</li>
+<li>
+<p>Has good community support and resources to read and learn.</p>
+</li>
+</ul>
+<p><a href="https://www.digitalocean.com/">Digital Ocean</a> is a platform which has all the aforementioned guidelines for choosing a cloud hosting provider. We will also be using Digital Ocean to teach you how to setup cloud hosting for your wordpress website.</p>
+<blockquote>
+<h4 id="step-1-make-an-account-on-digital-ocean">Step 1: Make an account on Digital Ocean<a class="headerlink" href="#step-1-make-an-account-on-digital-ocean" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Visit <a href="https://www.digitalocean.com/">Digital Ocean</a></li>
+<li>Use the sign up form as shown in the image below to make an account.</li>
+</ol>
+</blockquote>
+<h2 id="reminder-pdf3-image1-to-be-added">Reminder: pdf3-image1 to be added<a class="headerlink" href="#reminder-pdf3-image1-to-be-added" title="Permanent link">&para;</a></h2>
+<blockquote>
+<h4 id="step-2-create-a-droplet-cloud-hosted-server-with-one-click-wordpress-installation">Step 2: Create a Droplet (Cloud Hosted Server) with One-click Wordpress Installation<a class="headerlink" href="#step-2-create-a-droplet-cloud-hosted-server-with-one-click-wordpress-installation" title="Permanent link">&para;</a></h4>
+</blockquote>
+<ol>
+<li>Log in and click the ‘CREATE’ button and choose ‘DROPLETS’ in the dropdown as shown
+in the image below.</li>
+</ol>
+<h2 id="reminder-pdf3-image2-to-be-added">Reminder: pdf3-image2 to be added<a class="headerlink" href="#reminder-pdf3-image2-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Click on ‘Marketplace’ which has all the options for one-click installations as shown in the image below.</li>
+</ol>
+<h2 id="reminder-pdf3-image3-to-be-added">Reminder: pdf3-image3 to be added<a class="headerlink" href="#reminder-pdf3-image3-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Choose the option of ‘WORDPRESS’ from the list in the marketplace, it will be at the end
+of the list as shown in the image below.</li>
+</ol>
+<h2 id="reminder-pdf3-image4-to-be-added">Reminder: pdf3-image4 to be added<a class="headerlink" href="#reminder-pdf3-image4-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Choose a ‘STANDARD’ plan it’s good enough for any wordpress business website, and select the pricing plan from the available plans, I would suggest you to go get started with
+$5 plan, as shown in the image below and you can always upgrade as per your needs.</li>
+</ol>
+<h2 id="reminder-pdf3-image5-to-be-added">Reminder: pdf3-image5 to be added<a class="headerlink" href="#reminder-pdf3-image5-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Leave the Backup and Block Storage sections as default, as shown in the image below.</li>
+</ol>
+<h2 id="reminder-pdf3-image6-to-be-added">Reminder: pdf3-image6 to be added<a class="headerlink" href="#reminder-pdf3-image6-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Choose a ‘DATACENTER’, this step is important. You should always choose a datacenter which is geographically nearest to your prospective customers. For example, if you are building a website for users who stay in India, you should select ‘Bangalore’ as a datacenter. Having a datacenter in the same country helps to serve data more quickly to the people visiting the website, making your website experience better for your website visitors.</li>
+</ol>
+<h2 id="reminder-pdf3-image7-to-be-added">Reminder: pdf3-image7 to be added<a class="headerlink" href="#reminder-pdf3-image7-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Name Your Droplet, and Finally Click on ‘CREATE’ as shown in the image below</li>
+</ol>
+<h2 id="reminder-pdf3-image8-to-be-added">Reminder: pdf3-image8 to be added<a class="headerlink" href="#reminder-pdf3-image8-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Name Your Droplet, and Finally Click on ‘CREATE’ as shown in the image below</li>
+</ol>
+<h2 id="reminder-pdf3-image9-to-be-added">Reminder: pdf3-image9 to be added<a class="headerlink" href="#reminder-pdf3-image9-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Droplet creation loader is visible on your dashboard and only takes a few seconds to be created as shown in the image below</li>
+</ol>
+<h2 id="reminder-pdf3-image10-to-be-added">Reminder: pdf3-image10 to be added<a class="headerlink" href="#reminder-pdf3-image10-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>IP address and a success email on the registered email ID are two things you should see and receive on the successful creation of your droplet with wordpress installed on it, as shown in the images below</li>
+</ol>
+<h2 id="reminder-pdf3-image11-to-be-added">Reminder: pdf3-image11 to be added<a class="headerlink" href="#reminder-pdf3-image11-to-be-added" title="Permanent link">&para;</a></h2>
+<h2 id="reminder-pdf3-image12-to-be-added">Reminder: pdf3-image12 to be added<a class="headerlink" href="#reminder-pdf3-image12-to-be-added" title="Permanent link">&para;</a></h2>
+<blockquote>
+<h4 id="step-3-change-the-password-for-your-droplet-server">Step 3: Change the Password For Your Droplet Server<a class="headerlink" href="#step-3-change-the-password-for-your-droplet-server" title="Permanent link">&para;</a></h4>
+<p>This is a very important step, to secure your cloud server and also a compulsory step after successful droplet creation. Follow the following sub-steps to successfully change password of your server.
+1. Access your droplet console, click on the 3 dots in front of your droplet name and click on console from the dropdown as shown in the image below:</p>
+</blockquote>
+<h2 id="reminder-pdf3-image13-to-be-added">Reminder: pdf3-image13 to be added<a class="headerlink" href="#reminder-pdf3-image13-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Enter your username (root) on the console screen, you would have received a username
+and password in your registered email id, as shown in the image below:</li>
+</ol>
+<h2 id="reminder-pdf3-image14-to-be-added">Reminder: pdf3-image14 to be added<a class="headerlink" href="#reminder-pdf3-image14-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Enter your password, and the system will automatically tell you to create a new password and confirm the same as shown in the image below. Please note that whatever you type in the password field is not visible for security reasons. So please type carefully and do not forget the new password you create on this step.</li>
+</ol>
+<h2 id="reminder-pdf3-image15-to-be-added">Reminder: pdf3-image15 to be added<a class="headerlink" href="#reminder-pdf3-image15-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Exit the console after you see that you have successfully logged into your server. The screen will display a message like shown in the image below:</li>
+</ol>
+<h2 id="reminder-pdf3-image16-to-be-added">Reminder: pdf3-image16 to be added<a class="headerlink" href="#reminder-pdf3-image16-to-be-added" title="Permanent link">&para;</a></h2>
+<blockquote>
+<h4 id="step-4-complete-the-wordpress-installation-on-your-droplet-server-by-following-the-steps-below">Step 4: Complete the wordpress installation on your droplet (Server) by following the steps below<a class="headerlink" href="#step-4-complete-the-wordpress-installation-on-your-droplet-server-by-following-the-steps-below" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Choose Wordpress Language. Open the IP address of your new droplet in Google Chrome or any other browser and select the language in which you would like to manage your wordpress website as shown in the image below</li>
+</ol>
+</blockquote>
+<h2 id="reminder-pdf3-image17-to-be-added">Reminder: pdf3-image17 to be added<a class="headerlink" href="#reminder-pdf3-image17-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Enter basic details and click on ‘Install’ to complete Wordpress installation on your droplet, as shown in the image below</li>
+</ol>
+<h2 id="reminder-pdf3-image18-to-be-added">Reminder: pdf3-image18 to be added<a class="headerlink" href="#reminder-pdf3-image18-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Wordpress successfully installed screen should be visible to you, as shown in the image below</li>
+</ol>
+<h2 id="reminder-pdf3-image19-to-be-added">Reminder: pdf3-image19 to be added<a class="headerlink" href="#reminder-pdf3-image19-to-be-added" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Open your new wordpress website by visiting the IP address in a browser, your new fresh
+wordpress website should look like as shown below:</li>
+</ol>
+<h2 id="reminder-pdf3-image20-to-be-added">Reminder: pdf3-image20 to be added<a class="headerlink" href="#reminder-pdf3-image20-to-be-added" title="Permanent link">&para;</a></h2>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: August 8, 2020
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../DNS/" title="Domains Name System (DNS)" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Domains Name System (DNS)
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

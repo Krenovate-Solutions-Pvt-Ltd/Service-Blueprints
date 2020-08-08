@@ -1,6 +1,9 @@
 site_name: Service Blueprints
 nav:
-  -  Welcome:  'index.md'
+- Domains and hosting:
+   -  Domains: 'Domains-and-hosting/Domains.md'
+   -  Domains Name System (DNS): 'Domains-and-hosting/DNS.md'
+   -  Hosting: 'Domains-and-hosting/Hosting.md'
 theme:
   name: material
   features:

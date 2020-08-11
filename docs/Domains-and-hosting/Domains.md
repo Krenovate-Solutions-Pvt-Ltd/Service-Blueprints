@@ -34,7 +34,9 @@ The data and information on HTTPS websites is encrypted using *SSL certificates*
 Let’s say our credit card number is 
 **1234 5678 9999 0000**,
 all HTTPS websites will convert this data into an encrypted format like 
-**‘kjbdy87343hkdh873837864hdwsdtrsdwte72328627362876826vsjhdwud67e228736287632’** 
+
+**‘kjbdy87343hkdh873837864hdwsdtrsdwte72328627362876826**
+**vsjhdwud67e228736287632’** 
 
 And this encryption changes every time we enter any data on any HTTPS website.
 

@@ -24,6 +24,8 @@ At Krenovate, we provide  various services including:
 
 To start your journey with krenovate here is a drop by drop guide:
 
+**Table of contents**
+
 **1. Domains and Hosting**
 
 - 1.1 [Domains](Domains-and-hosting/Domains.md)

@@ -42,22 +42,21 @@ And this encryption changes every time we enter any data on any HTTPS website.
 
 #### **HTTP vs HTTPS**
 
-   **HTTP** (*No encryption*)
+**HTTP** (*No encryption*)
 
     Data entered: 1234 5678 9999 0000   
     Data saved as: 1234 5678 9999 0000
 
-  **HTTPS** (*Encryption through SSL certificates*)
+![1](images/pdf1-paint1.jpg)  
+
+**HTTPS** (*Encryption through SSL certificates*)
 
     Data entered: 1234 5678 9999 0000    
     Data saved as: nhnkqoayhgqlabgjmcieioegebsksbshs8782n9dybsjsi8eyey920jsn
 
-Needless to say that we should avoid sharing any confidential data on a HTTP website. Also use Google Chrome to safeguard and make people aware about the websites which are not secure. Check
-the image below.
+![2](images/pdf1-paint2.jpg)   
 
-![1](images/pdf1-paint1.jpg)
-
-While websites using SSL certificate are marked as safe by Google Chrome, look at the following image.
+Needless to say that we should avoid sharing any confidential data on a HTTP website. Also use Google Chrome to safeguard and make people aware about the websites which are not secure.Websites using SSL certificate are marked as safe by Google Chrome.
 
 ![2](images/pdf1-paint2.jpg)
 

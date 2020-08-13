@@ -66,10 +66,6 @@ Personas and content mapping go hand in hand. You can't create a useful, accurat
 
 - A persona is about perception. For example in the business world, for instance if a businessman wants others to think that he is very powerful and successful, he might drive a fancy car, buy a big house, wear expensive clothing, and talk down to people that he thinks are below him on the social ladder.
 
-
-
-#### **Sources to gain user characteristics**
-
 A buyer persona typically outlines the following characteristics of the ideal buyer:
 
 - **Demographics:** It includes age, gender, income, location, family situation, income, education, etc.
@@ -85,6 +81,32 @@ professional and personal goals, values, lifestyle details
 
 - **Buying Habits:** What objections they keep before buying, where from they buy, how long it takes them to buy, who makes the buying decisions.
 
+
+#### **Sources to gain information**
+
+While strategisisng you need to know what is currently trending in your area, what people are more curious about, which keyword will work best at that particular time. So the one strategising a content map for a particular website will do a research for the keywords and other important news to gain information in detail. Some of the online tools from where any user can find out which content/keyword is popular by topic. Some of the tools are given below.
+
+**1.Google Trends**
+
+It is a search trends feature that shows how frequently a given search term is entered into Google’s search engine relative to the site’s total search volume over a given period of time. It can be used for comparative keyword research and to discover event-triggered spikes in keyword search volume.
+
+Google Trends provides keyword-related data including search volume index and geographical information about search engine users.
+
+You can use the data found in Google Trends for several different marketing purposes:
+
+![Ms-table](images/MS-table.PNG)
+
+**2.BuzzSumo**
+
+It is powerful online tool that allows any user to find out what content is popular by topic or on any website.
+It can take hours scanning all the various social sites to find out what people are talking about and what their concerns and needs are. Being able to input certain search criteria, analyzing content and finding out what is already working in your area can be priceless to a marketer to help sharpen your focus and give you direction. 
+
+**2.BuzzFeed**
+
+It is the leading independent digital media company delivering news and entertainment to hundreds of millions of people around the world and taking the social web by storm.
+It leverages data and innovation to reach millions globally.
+So you can gather information about the trending topics and get aware and create a content map based on that.
+
 #### **Keyword Mapping and Research**
 
 - It is the process of assigning relevant keywords to the different pages on a website based on thorough keyword research. 
@@ -95,43 +117,61 @@ professional and personal goals, values, lifestyle details
 
 - The ultimate goal of this map is to help you discover where to optimize, what content to build, and where you can add new pages to attract more traffic/users.
 
+**Step by step guide for keyword research:**
 
-# **Reminder : changes reqd in the below paragraph:**
+**1. BuzzSumo**
 
-google trends india <https://trends.google.com/trends/?geo=IN>
+- You can visit <https://buzzsumo.com/> and type any word in the search bar and see the searches for that particular word.
 
+![Bs-1](images/Bs-1.png)
 
+- For example for the word digital marketing here you can see  the searches in number.
 
+![Bs-2](images/Bs-2.png)
 
-we made Google Trends data available in real time; and increasingly, it’s helping people around the world explore the global reaction to major events.
-The vast amount of searches — trillions take place every year — make Google Trends one of the world’s largest real time datasets. Examining what people search for provides a unique perspective on what they are currently interested in and curious about.we made Google Trends data available in real time; and increasingly, it’s helping people around the world explore the global reaction to major events.
+**2. Google Trends**
 
-What is Trends data?
+![Gt-1](images/GT-1.png)
 
-Trends data is an unbiased sample of our Google search data. It’s anonymized (no one is personally identified), categorized (determining the topic for a search query) and aggregated (grouped together). This allows us to measure interest in a particular topic across search, from around the globe, right down to city-level geography.
+![Gt-2](images/GT-2.png)
 
+![Gt-3](images/GT-3.png)
 
-There are two ways to filter the Trends data: real time and non-real time. Real time is a random sample of searches from the last seven days, while non-real time is another random sample of the full Google dataset that can go back anywhere from 2004 to ~36 hours ago.
+![Gt-4](images/GT-4.png)
 
-Those “spikes” are a sudden acceleration of search interest in a topic, compared to usual search volume.
+![Gt-5](images/GT-5.png)
 
-<https://ahrefs.com/blog/how-to-use-google-trends-for-keyword-research/>
+![Gt-6](images/GT-6.png)
 
-<https://www.bizcommunity.com/Article/196/16/176195.html>
+![Gt-7](images/GT-7.png)
 
-<https://www.wordstream.com/google-trends>
+![Gt-8](images/GT-8.png)
 
-<https://blog.thatagency.com/what-is-keyword-mapping>
+![Gt-9](images/GT-9.png)
 
-<https://blog.alexa.com/content-mapping/>
+![Gt-10](images/GT-10.png)
 
-<https://blog.alexa.com/content-mapping/>
+![Gt-11](images/GT-11.png)
+
+![Gt-12](images/GT-12.png)
+
+![Gt-13](images/GT-13.png)
+
+![Gt-14](images/GT-14.png)
+
+![Gt-15](images/GT-15.png)
+
+![Gt-16](images/GT-16.png)
+
+![Gt-17](images/GT-17.png)
 
 ### **Lifecycle Stages**
 
 This outlines the journey of a user throughout from seeking information about ways and methods about your product/service to the finalised service/product they are interested to avail/buy which can meet their needs.
 
 It outlines five stages of the marketing funnel which are as follows:
+
+![]
 
 **1. Awareness**
 
@@ -143,3 +183,8 @@ It outlines five stages of the marketing funnel which are as follows:
 
 **5. Post-purchase**
 
+
+
+**Helps and Guides:**
+
+<https://www.bizcommunity.com/Article/196/16/176195.html>

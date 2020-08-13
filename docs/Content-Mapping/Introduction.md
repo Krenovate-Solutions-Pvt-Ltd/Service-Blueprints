@@ -66,22 +66,6 @@ Personas and content mapping go hand in hand. You can't create a useful, accurat
 
 - A persona is about perception. For example in the business world, for instance if a businessman wants others to think that he is very powerful and successful, he might drive a fancy car, buy a big house, wear expensive clothing, and talk down to people that he thinks are below him on the social ladder.
 
-A buyer persona typically outlines the following characteristics of the ideal buyer:
-
-- **Demographics:** It includes age, gender, income, location, family situation, income, education, etc.
-
-- **Professional Role:** It mainly focuses on Industry, job title, company size
-
-- **Values and Goals:**  What the user believe strongly in,
-professional and personal goals, values, lifestyle details
-
-- **Challenges:** What challenges the user is facing, pain points, fears, issues at work or home
-
-- **Sources and Influences:** What are their favorite blogs, books, thought leaders, conferences
-
-- **Buying Habits:** What objections they keep before buying, where from they buy, how long it takes them to buy, who makes the buying decisions.
-
-
 #### **Sources to gain information**
 
 While strategisisng you need to know what is currently trending in your area, what people are more curious about, which keyword will work best at that particular time. So the one strategising a content map for a particular website will do a research for the keywords and other important news to gain information in detail. Some of the online tools from where any user can find out which content/keyword is popular by topic. Some of the tools are given below.
@@ -131,31 +115,67 @@ So you can gather information about the trending topics and get aware and create
 
 **2. Google Trends**
 
+- Visit <https://trends.google.co.in/trends/?geo=IN>
+
+- In the image given below you can choose any country wich you want to look for.
+
 ![Gt-1](images/GT-1.png)
+
+- For example here country is selected as India. You can change it to any other country.
 
 ![Gt-2](images/GT-2.png)
 
+- In the search bar you can type any word for which you want to check like the word business is searched in the below image.Then you are ready for search.
+
 ![Gt-3](images/GT-3.png)
+
+- The graph here is representing the number of searches for business word and the green tabs are for filter. You can change it accordingly. 
 
 ![Gt-4](images/GT-4.png)
 
+- India has been selected here. You can select according to your requirements. 
+
 ![Gt-5](images/GT-5.png)
+
+- From this tab you can select the time period for which  the graph should be represented. Like here it is selected as 'Past 12 months'. 
 
 ![Gt-6](images/GT-6.png)
 
+- Here you can filter search as per your requirements. 'pets and animals' have been selected here. The graph will look different as you can see in the image below.
+
 ![Gt-7](images/GT-7.png)
+
+- 'Web search' has been selected here. You can change it accordingly.
 
 ![Gt-8](images/GT-8.png)
 
+- You can click on the " + compare " button for the comparison between the words for the number of searches. For example here two words have been added cat and dog. Now it will start showing you three lines in the graph. Here business, cat and dog words are represented by blue, red, yellow lines respectively. 
+
 ![Gt-9](images/GT-9.png)
+
+- You can this download this data for further process.
 
 ![Gt-10](images/GT-10.png)
 
+- Excel sheet will be generated automatically after you download the graph data
+
 ![Gt-11](images/GT-11.png)
+
+- You can download this data region-wise.
 
 ![Gt-12](images/GT-12.png)
 
+- After downloading the region-wise data you can see another excel sheet generated on your screen.
+
 ![Gt-13](images/GT-13.png)
+
+- Click on the left topmost symbol as shown in the figure.
+
+![G-19](images/G-19.png)
+
+- Click on the 'Trending Searches' to get the trending topics. It will update you on hourly basis and will show you the old data in the 'daily search trends' and 'real time search trends respectively. Check out the images given below:   
+
+![GT-18](images/GT-18.png)
 
 ![Gt-14](images/GT-14.png)
 
@@ -165,25 +185,23 @@ So you can gather information about the trending topics and get aware and create
 
 ![Gt-17](images/GT-17.png)
 
-### **Lifecycle Stages**
+### **Lifecycle Phases**
 
 This outlines the journey of a user throughout from seeking information about ways and methods about your product/service to the finalised service/product they are interested to avail/buy which can meet their needs.
 
-It outlines five stages of the marketing funnel which are as follows:
+It outlines five stages of the customer journey:
 
-![]
+![Lifecycle-images](images/lifecycle-stages.PNG)
 
-**1. Awareness**
+**1. Awareness Phase:** In this phase a prospect becomes aware of a need. They begin seeking fulfilment of that need, a solution to a problem, or an answer to a question. During their search, they start to notice a brand for the first time. They become aware of the company, gain a broad understanding of who they are and what they offer, and start to see how the brand could help them.
 
-**2. Engagement**
+**2. Engagement Phase:** In this phase, a customer is already familiar with a brand, and they are learning more about them. The brand and the prospect have formed some sort of connection as the prospect gathers information that helps them in some way. The prospect may have followed the brand on social media, opted in for a newsletter, or signed up for a free trial or content upgrade.
 
-**3. Evaluation**
+**3. Evaluation Phase:** By this phase, the prospect already knows that the brand can solve their problem or provide what they need but they are still considering if the brand is the best available solution. They do research and compare the brand to others in the market.
 
-**4. Purchase**
+**4. Purchase Phase:** During this phase, the prospect turns into a paying customer. They have decided on a brand and are ready to buy. They just need the tools, process, and path to make their purchase.
 
-**5. Post-purchase**
-
-
+**5. Post-purchase Phase:** The customer journey does not end once the prospect makes a purchase. Customers at this point may need additional support or services, and they are also primed to buy again.
 
 **Helps and Guides:**
 

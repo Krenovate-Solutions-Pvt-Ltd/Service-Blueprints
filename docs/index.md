@@ -32,3 +32,6 @@ To start your journey with krenovate here is a drop by drop guide:
 - 1.2 [DNS](Domains-and-hosting/DNS.md)
 - 1.3 [Hosting](Domains-and-hosting/Hosting.md)
 
+**2. Content Mapping**
+
+**3. Website Designing**

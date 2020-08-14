@@ -193,9 +193,9 @@ It outlines five stages of the customer journey:
 
 ![Lifecycle-images](images/lifecycle-stages.PNG)
 
-**1. Awareness Phase:** In this phase a prospect becomes aware of a need. They begin seeking fulfilment of that need, a solution to a problem, or an answer to a question. During their search, they start to notice a brand for the first time. They become aware of the company, gain a broad understanding of who they are and what they offer, and start to see how the brand could help them.
+**1. Awareness Phase:** In this phase, a prospect becomes aware of a need. They begin seeking fulfilment of that need, a solution to a problem, or an answer to a question. During their search, they start to notice a brand for the first time. They become aware of the company, gain a broad understanding of who they are and what they offer, and start to see how the brand could help them.
 
-**2. Engagement Phase:** In this phase, a customer is already familiar with a brand, and they are learning more about them. The brand and the prospect have formed some sort of connection as the prospect gathers information that helps them in some way. The prospect may have followed the brand on social media, opted in for a newsletter, or signed up for a free trial or content upgrade.
+**2. Engagement Phase:** In this phase, a customer is already familiar with a brand and they are learning more about them. The brand and the prospect have formed some sort of connection as the prospect gathers information that helps them in some way. The prospect may have followed the brand on social media, opted in for a newsletter, or signed up for a free trial or content upgrade.
 
 **3. Evaluation Phase:** By this phase, the prospect already knows that the brand can solve their problem or provide what they need but they are still considering if the brand is the best available solution. They do research and compare the brand to others in the market.
 

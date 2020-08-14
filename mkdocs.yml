@@ -8,7 +8,9 @@ nav:
    - Introduction : 'Content-Mapping/Introduction.md'
    - How Krenovate gives quality search : 'Content-Mapping/Krenovate-quality-search.md'
    - Strategic Content Map: 'Content-Mapping/Strategic-content-map.md'
-
+- Website Designing:
+   - Introduction : 'Website-Designing/Introduction.md'
+   - UI and UX : 'Website-Designing\UX-and-UI.md'
 theme:
   name: material
   features:

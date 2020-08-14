@@ -20,3 +20,18 @@ At Krenovate, we provide  various services including:
 -	[Google Ads](https://agency.krenovate.com/google-ads/)
 -	[Search Engine Optimisation](https://agency.krenovate.com/seo-services-company/)
 -	[Email Marketing](https://agency.krenovate.com/email-marketing/)
+
+
+To start your journey with krenovate here is a drop by drop guide:
+
+**Table of contents**
+
+**1. Domains and Hosting**
+
+- 1.1 [Domains](Domains-and-hosting/Domains.md)
+- 1.2 [DNS](Domains-and-hosting/DNS.md)
+- 1.3 [Hosting](Domains-and-hosting/Hosting.md)
+
+**2. Content Mapping**
+
+**3. Website Designing**

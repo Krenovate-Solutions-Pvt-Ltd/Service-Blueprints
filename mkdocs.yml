@@ -10,7 +10,7 @@ nav:
    - Strategic Content Map: 'Content-Mapping/Strategic-content-map.md'
 - Website Designing:
    - Introduction : 'Website-Designing/Introduction.md'
-   - UI and UX : 'Website-Designing\UX-and-UI.md'
+   - UI and UX : 'Website-Designing/UX-and-UI.md'
 theme:
   name: material
   features:

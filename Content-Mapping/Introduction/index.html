@@ -1,0 +1,883 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Introduction - Service Blueprints</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Inter",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#content-mapping" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Service Blueprints" class="md-header-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Service Blueprints
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Service Blueprints" class="md-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Service Blueprints
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Domains and hosting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Domains and hosting" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Domains and hosting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Domains-and-hosting/Domains/" title="Domains" class="md-nav__link">
+      Domains
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Domains-and-hosting/DNS/" title="Domains Name System (DNS)" class="md-nav__link">
+      Domains Name System (DNS)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Domains-and-hosting/Hosting/" title="Hosting" class="md-nav__link">
+      Hosting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Content Mapping
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Content Mapping" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Content Mapping
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Introduction" class="md-nav__link md-nav__link--active">
+      Introduction
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-content-map" class="md-nav__link">
+    What is a Content map?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-content-mapping" class="md-nav__link">
+    What is Content Mapping?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Content Mapping?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-pillars" class="md-nav__link">
+    Three Pillars
+  </a>
+  
+    <nav class="md-nav" aria-label="Three Pillars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#right-content" class="md-nav__link">
+    Right Content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-people" class="md-nav__link">
+    Right People
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-time" class="md-nav__link">
+    Right Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-content-mapping" class="md-nav__link">
+    Benefits of  Content Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-mapping-activity" class="md-nav__link">
+    Content Mapping activity
+  </a>
+  
+    <nav class="md-nav" aria-label="Content Mapping activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-persona" class="md-nav__link">
+    User Persona
+  </a>
+  
+    <nav class="md-nav" aria-label="User Persona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    What it is?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-to-gain-information" class="md-nav__link">
+    Sources to gain information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyword-mapping-and-research" class="md-nav__link">
+    Keyword Mapping and Research
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle-phases" class="md-nav__link">
+    Lifecycle Phases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Krenovate-quality-search/" title="How Krenovate gives quality search" class="md-nav__link">
+      How Krenovate gives quality search
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Strategic-content-map/" title="Strategic Content Map" class="md-nav__link">
+      Strategic Content Map
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-a-content-map" class="md-nav__link">
+    What is a Content map?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-content-mapping" class="md-nav__link">
+    What is Content Mapping?
+  </a>
+  
+    <nav class="md-nav" aria-label="What is Content Mapping?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#three-pillars" class="md-nav__link">
+    Three Pillars
+  </a>
+  
+    <nav class="md-nav" aria-label="Three Pillars">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#right-content" class="md-nav__link">
+    Right Content
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-people" class="md-nav__link">
+    Right People
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#right-time" class="md-nav__link">
+    Right Time
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-content-mapping" class="md-nav__link">
+    Benefits of  Content Mapping
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#content-mapping-activity" class="md-nav__link">
+    Content Mapping activity
+  </a>
+  
+    <nav class="md-nav" aria-label="Content Mapping activity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#user-persona" class="md-nav__link">
+    User Persona
+  </a>
+  
+    <nav class="md-nav" aria-label="User Persona">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-it-is" class="md-nav__link">
+    What it is?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sources-to-gain-information" class="md-nav__link">
+    Sources to gain information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyword-mapping-and-research" class="md-nav__link">
+    Keyword Mapping and Research
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lifecycle-phases" class="md-nav__link">
+    Lifecycle Phases
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="content-mapping"><strong>Content Mapping</strong><a class="headerlink" href="#content-mapping" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-a-content-map"><strong>What is a Content map?</strong><a class="headerlink" href="#what-is-a-content-map" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>A content map is a plan to deliver the right content, to the right people, at the right time. Building content maps is the first step towards making a good website. </p>
+</li>
+<li>
+<p>It acts as a blueprint of your website. It allows you and your team to be organized and visualize what the site will become.</p>
+</li>
+<li>
+<p>It is a valuable tool when you are working with a web design company to produce your website.</p>
+</li>
+</ul>
+<h2 id="what-is-content-mapping"><strong>What is Content Mapping?</strong><a class="headerlink" href="#what-is-content-mapping" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Content Mapping focuses on how each piece of the content is strategically related to and supports the customer/client journey.</p>
+</li>
+<li>
+<p>It helps us to relate and connect to each of the phases/steps in a customer journey and helps us to deliver better and meet the needs of our target audience.</p>
+</li>
+<li>
+<p>Content mapping takes into account the characteristics of the person who will be consuming the content and their lifecycle stage.</p>
+</li>
+</ul>
+<h3 id="three-pillars"><strong>Three Pillars</strong><a class="headerlink" href="#three-pillars" title="Permanent link">&para;</a></h3>
+<p>To create an effective website you need to keep in mind these three pillars of content mapping which are as follows:</p>
+<h4 id="right-content"><strong>Right Content</strong><a class="headerlink" href="#right-content" title="Permanent link">&para;</a></h4>
+<p>This means creating valuable content for the users/customers/clients visiting your website. For example if you have build a website for fashion and clothing you have to put the content for the same and not for health and fitness because if users are visiting a website for fashion and clothing they should be shown content relevant  to fashion and clothing and not health and fitness.That will make more sense to them.</p>
+<h4 id="right-people"><strong>Right People</strong><a class="headerlink" href="#right-people" title="Permanent link">&para;</a></h4>
+<p>People who visit your website will be generally from differet age groups, interests and needs. By 'right people' it means if you have build a website for women clothing and showing content for men fashion trends and sales on men wear it will not generate good sales for women clothing as your content is not specific for the people you have defined.</p>
+<h4 id="right-time"><strong>Right Time</strong><a class="headerlink" href="#right-time" title="Permanent link">&para;</a></h4>
+<p>By right time we do not mean that your website should have different content on different dates and time. By this we meant that a user/client goes through different stages before coming to a decision. For example Mr. A has to buy a shirt and he is gathering the information for the same from different websites. So he is in the process of getting details but he visits a website whhich is showing him there is a 30% discount for the same. At that particular 'gathering the information' stage he is getting the irrelevant content which he may require later. So it becomes very important for organisations to create the content based on the lifecycle stage of the person visiting the website.</p>
+<h2 id="benefits-of-content-mapping"><strong>Benefits of  Content Mapping</strong><a class="headerlink" href="#benefits-of-content-mapping" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>It helps you understand your customer and lays out their   journey. </p>
+</li>
+<li>
+<p>It gives you an overview of all the content you have and identify the holes in your content strategy. </p>
+</li>
+<li>
+<p>It helps you get the most out of your content.</p>
+</li>
+<li>
+<p>It can double as a Keyword map.</p>
+</li>
+<li>
+<p>It aligns content with personas.</p>
+</li>
+<li>
+<p>It helps customers through their purchase funnel.</p>
+</li>
+</ul>
+<h2 id="content-mapping-activity"><strong>Content Mapping activity</strong><a class="headerlink" href="#content-mapping-activity" title="Permanent link">&para;</a></h2>
+<p>A Content Mapping Activity is divided into two sections as follows:</p>
+<p><strong>1.</strong> User/Buyer persona</p>
+<p><strong>2.</strong> Lifecycle Stages</p>
+<h3 id="user-persona"><strong>User Persona</strong><a class="headerlink" href="#user-persona" title="Permanent link">&para;</a></h3>
+<p>Personas and content mapping go hand in hand. You can't create a useful, accurate content map without developing an in-depth user/buyer persona first. </p>
+<h4 id="what-it-is"><strong>What it is?</strong><a class="headerlink" href="#what-it-is" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>A user persona is a detailed description of your ideal audience. It helps you get to know your customers and understand what they know, want, and need.</p>
+</li>
+<li>
+<p>It help businesses understand and empathize with their customers so they can do a better job of acquiring and serving them.</p>
+</li>
+<li>
+<p>A persona is about perception. For example in the business world, for instance if a businessman wants others to think that he is very powerful and successful, he might drive a fancy car, buy a big house, wear expensive clothing, and talk down to people that he thinks are below him on the social ladder.</p>
+</li>
+</ul>
+<h4 id="sources-to-gain-information"><strong>Sources to gain information</strong><a class="headerlink" href="#sources-to-gain-information" title="Permanent link">&para;</a></h4>
+<p>While strategisisng you need to know what is currently trending in your area, what people are more curious about, which keyword will work best at that particular time. So the one strategising a content map for a particular website will do a research for the keywords and other important news to gain information in detail. Some of the online tools from where any user can find out which content/keyword is popular by topic. Some of the tools are given below.</p>
+<p><strong>1.Google Trends</strong></p>
+<p>It is a search trends feature that shows how frequently a given search term is entered into Google’s search engine relative to the site’s total search volume over a given period of time. It can be used for comparative keyword research and to discover event-triggered spikes in keyword search volume.</p>
+<p>Google Trends provides keyword-related data including search volume index and geographical information about search engine users.</p>
+<p>You can use the data found in Google Trends for several different marketing purposes:</p>
+<p><img alt="Ms-table" src="../images/MS-table.PNG" /></p>
+<p><strong>2.BuzzSumo</strong></p>
+<p>It is powerful online tool that allows any user to find out what content is popular by topic or on any website.
+It can take hours scanning all the various social sites to find out what people are talking about and what their concerns and needs are. Being able to input certain search criteria, analyzing content and finding out what is already working in your area can be priceless to a marketer to help sharpen your focus and give you direction. </p>
+<p><strong>2.BuzzFeed</strong></p>
+<p>It is the leading independent digital media company delivering news and entertainment to hundreds of millions of people around the world and taking the social web by storm.
+It leverages data and innovation to reach millions globally.
+So you can gather information about the trending topics and get aware and create a content map based on that.</p>
+<h4 id="keyword-mapping-and-research"><strong>Keyword Mapping and Research</strong><a class="headerlink" href="#keyword-mapping-and-research" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p>It is the process of assigning relevant keywords to the different pages on a website based on thorough keyword research. </p>
+</li>
+<li>
+<p>It is a framework for the keywords you have chosen to target that mirrors your site's structure.</p>
+</li>
+<li>
+<p>It is an important aspect of on-page search engine optimization that will allow search engines to see the page’s relevancy based on a user’s search. </p>
+</li>
+<li>
+<p>The ultimate goal of this map is to help you discover where to optimize, what content to build, and where you can add new pages to attract more traffic/users.</p>
+</li>
+</ul>
+<p><strong>Step by step guide for keyword research:</strong></p>
+<p><strong>1. BuzzSumo</strong></p>
+<ul>
+<li>You can visit <a href="https://buzzsumo.com/">https://buzzsumo.com/</a> and type any word in the search bar and see the searches for that particular word.</li>
+</ul>
+<p><img alt="Bs-1" src="../images/Bs-1.png" /></p>
+<ul>
+<li>For example for the word digital marketing here you can see  the searches in number.</li>
+</ul>
+<p><img alt="Bs-2" src="../images/Bs-2.png" /></p>
+<p><strong>2. Google Trends</strong></p>
+<ul>
+<li>
+<p>Visit <a href="https://trends.google.co.in/trends/?geo=IN">https://trends.google.co.in/trends/?geo=IN</a></p>
+</li>
+<li>
+<p>In the image given below you can choose any country wich you want to look for.</p>
+</li>
+</ul>
+<p><img alt="Gt-1" src="../images/GT-1.png" /></p>
+<ul>
+<li>For example here country is selected as India. You can change it to any other country.</li>
+</ul>
+<p><img alt="Gt-2" src="../images/GT-2.png" /></p>
+<ul>
+<li>In the search bar you can type any word for which you want to check like the word business is searched in the below image.Then you are ready for search.</li>
+</ul>
+<p><img alt="Gt-3" src="../images/GT-3.png" /></p>
+<ul>
+<li>The graph here is representing the number of searches for business word and the green tabs are for filter. You can change it accordingly. </li>
+</ul>
+<p><img alt="Gt-4" src="../images/GT-4.png" /></p>
+<ul>
+<li>India has been selected here. You can select according to your requirements. </li>
+</ul>
+<p><img alt="Gt-5" src="../images/GT-5.png" /></p>
+<ul>
+<li>From this tab you can select the time period for which  the graph should be represented. Like here it is selected as 'Past 12 months'. </li>
+</ul>
+<p><img alt="Gt-6" src="../images/GT-6.png" /></p>
+<ul>
+<li>Here you can filter search as per your requirements. 'pets and animals' have been selected here. The graph will look different as you can see in the image below.</li>
+</ul>
+<p><img alt="Gt-7" src="../images/GT-7.png" /></p>
+<ul>
+<li>'Web search' has been selected here. You can change it accordingly.</li>
+</ul>
+<p><img alt="Gt-8" src="../images/GT-8.png" /></p>
+<ul>
+<li>You can click on the " + compare " button for the comparison between the words for the number of searches. For example here two words have been added cat and dog. Now it will start showing you three lines in the graph. Here business, cat and dog words are represented by blue, red, yellow lines respectively. </li>
+</ul>
+<p><img alt="Gt-9" src="../images/GT-9.png" /></p>
+<ul>
+<li>You can this download this data for further process.</li>
+</ul>
+<p><img alt="Gt-10" src="../images/GT-10.png" /></p>
+<ul>
+<li>Excel sheet will be generated automatically after you download the graph data</li>
+</ul>
+<p><img alt="Gt-11" src="../images/GT-11.png" /></p>
+<ul>
+<li>You can download this data region-wise.</li>
+</ul>
+<p><img alt="Gt-12" src="../images/GT-12.png" /></p>
+<ul>
+<li>After downloading the region-wise data you can see another excel sheet generated on your screen.</li>
+</ul>
+<p><img alt="Gt-13" src="../images/GT-13.png" /></p>
+<ul>
+<li>Click on the left topmost symbol as shown in the figure.</li>
+</ul>
+<p><img alt="G-19" src="../images/G-19.png" /></p>
+<ul>
+<li>Click on the 'Trending Searches' to get the trending topics. It will update you on hourly basis and will show you the old data in the 'daily search trends' and 'real time search trends respectively. Check out the images given below:   </li>
+</ul>
+<p><img alt="GT-18" src="../images/GT-18.png" /></p>
+<p><img alt="Gt-14" src="../images/GT-14.png" /></p>
+<p><img alt="Gt-15" src="../images/GT-15.png" /></p>
+<p><img alt="Gt-16" src="../images/GT-16.png" /></p>
+<p><img alt="Gt-17" src="../images/GT-17.png" /></p>
+<h3 id="lifecycle-phases"><strong>Lifecycle Phases</strong><a class="headerlink" href="#lifecycle-phases" title="Permanent link">&para;</a></h3>
+<p>This outlines the journey of a user throughout from seeking information about ways and methods about your product/service to the finalised service/product they are interested to avail/buy which can meet their needs.</p>
+<p>It outlines five stages of the customer journey:</p>
+<p><img alt="Lifecycle-images" src="../images/lifecycle-stages.PNG" /></p>
+<p><strong>1. Awareness Phase:</strong> In this phase, a prospect becomes aware of a need. They begin seeking fulfilment of that need, a solution to a problem, or an answer to a question. During their search, they start to notice a brand for the first time. They become aware of the company, gain a broad understanding of who they are and what they offer, and start to see how the brand could help them.</p>
+<p><strong>2. Engagement Phase:</strong> In this phase, a customer is already familiar with a brand and they are learning more about them. The brand and the prospect have formed some sort of connection as the prospect gathers information that helps them in some way. The prospect may have followed the brand on social media, opted in for a newsletter, or signed up for a free trial or content upgrade.</p>
+<p><strong>3. Evaluation Phase:</strong> By this phase, the prospect already knows that the brand can solve their problem or provide what they need but they are still considering if the brand is the best available solution. They do research and compare the brand to others in the market.</p>
+<p><strong>4. Purchase Phase:</strong> During this phase, the prospect turns into a paying customer. They have decided on a brand and are ready to buy. They just need the tools, process, and path to make their purchase.</p>
+<p><strong>5. Post-purchase Phase:</strong> The customer journey does not end once the prospect makes a purchase. Customers at this point may need additional support or services, and they are also primed to buy again.</p>
+<p><strong>Helps and Guides:</strong></p>
+<p><a href="https://www.bizcommunity.com/Article/196/16/176195.html">https://www.bizcommunity.com/Article/196/16/176195.html</a></p>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: August 14, 2020
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../Domains-and-hosting/Hosting/" title="Hosting" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Hosting
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Krenovate-quality-search/" title="How Krenovate gives quality search" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                How Krenovate gives quality search
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

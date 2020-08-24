@@ -6,7 +6,9 @@ nav:
    -  Hosting: 'Domains-and-hosting/Hosting.md'
 - Content Mapping:
    - Introduction : 'Content-Mapping/Introduction.md'
-   - How Krenovate gives quality search : 'Content-Mapping/Krenovate-quality-search.md'
+   - Data Collection : 'Content-Mapping/Data-Collection.md'
+   - Building User Personas : 'Content-Mapping/Building-User-Personas.md'
+   - Building User Journey : 'Content-Mapping/Building-User-Lifecycle.md'
    - Strategic Content Map: 'Content-Mapping/Strategic-content-map.md'
 - Website Designing:
    - Introduction : 'Website-Designing/Introduction.md'

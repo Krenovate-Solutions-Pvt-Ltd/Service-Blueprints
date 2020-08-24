@@ -1,8 +1,8 @@
 # **How to create a Strategic Content Map**
 
->## **Step 1. Create a buyer persona to understand your audience.**
+## **Step 1. Create a buyer persona to understand your audience.**
 
-A buyer/user persona typically outlines the following characteristics of the ideal buyer:
+A [buyer/user persona](Building-User-Personas.md) typically outlines the following characteristics of the ideal buyer:
 
 - **Demographics:** It includes age, gender, income, location, family situation, income, education, etc.
 
@@ -21,21 +21,11 @@ Check out the image given below:
  
 ![cm-1](images/cm-1.PNG)
 
->## **Step 2. Document the journey your customer takes on their way to doing business with you.**
+## **Step 2. Document the journey your customer takes on their way to doing business with you.**
 
-- Once you have a clarity of who your ideal customer is, the content mapping process will be easier. You can use what you know about your ideal buyer to create a customer journey map that illustrates the path that person takes on their way to doing business with you.
+- Once you have a clarity of who your ideal customer is, the content mapping process will be easier. You can use what you know about your ideal buyer to [create a customer journey map](Building-User-Lifecycle.md) that illustrates the path that person takes on their way to doing business with you.
 
-- The journey map outlines your brand’s unique purchase funnel and how your ideal customer moves through it. It outlines five stages of the marketing funnel:
-
-   **Awareness**
-
-   **Engagement**
-
-   **Evaluation**
-
-   **Purchase**
-
-   **Post-purchase**
+-   [User Journey](Building-User-Lifecycle.md)
 
 - It also focuses on customer experiences at each stage of the marketing funnel. It may document the details for each phase. 
 
@@ -51,7 +41,7 @@ Check out the image given below:
 
 ![cm-2](images/cm-2.png)
 
->## **Step 3. Understand what content works best in each phase of the customer journey.**
+## **Step 3. Understand what content works best in each phase of the customer journey.**
 
 **Awareness** content or top-of-funnel content attracts new audiences to your brand and helps prospects find answers to the questions they ask when they have a requirement.
 
@@ -63,7 +53,7 @@ Check out the image given below:
 
 **Post-purchase** content supports customers after their purchase and also re-engages and remarkets to them to bring them back into the purchase funnel. 
 
->## **Step 4. Create a catalog of the content you have.**
+## **Step 4. Create a catalog of the content you have.**
 
 Perform a content audit and create a catalog of all the content you have which will prevent you from creating duplicate or redundant content assets.
 
@@ -75,7 +65,7 @@ Refer the below link to get more info about creating catalog:
 
 <https://blog.alexa.com/use-content-audit-template-assess-measure-plan-future/>
 
->## **Step 5. Map existing content to relevant phases of the customer journey.**
+## **Step 5. Map existing content to relevant phases of the customer journey.**
 
 The things you should consider while filling your content map:
 
@@ -93,7 +83,7 @@ Not all of your existing content may belong in your content map. If you find tha
 
 ![cm-4](images/cm-4.png)
 
->## **Step 6. Create targeted content for gaps in your content map.**
+## **Step 6. Create targeted content for gaps in your content map.**
 
 - Identify parts of your funnel that have inadequate/shallow content and create a plan for filling those gaps.
 

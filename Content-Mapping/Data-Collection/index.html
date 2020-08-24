@@ -1,0 +1,905 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>Data Collection - Service Blueprints</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#3f51b5">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,400i,700%7CSource+Code+Pro&display=fallback">
+        <style>body,input{font-family:"Inter",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Source Code Pro",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-collection" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Service Blueprints" class="md-header-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Service Blueprints
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Data Collection
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Service Blueprints" class="md-nav__button md-logo" aria-label="Service Blueprints">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Service Blueprints
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Domains and hosting
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Domains and hosting" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Domains and hosting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Domains-and-hosting/Domains/" title="Domains" class="md-nav__link">
+      Domains
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Domains-and-hosting/DNS/" title="Domains Name System (DNS)" class="md-nav__link">
+      Domains Name System (DNS)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Domains-and-hosting/Hosting/" title="Hosting" class="md-nav__link">
+      Hosting
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Content Mapping
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Content Mapping" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Content Mapping
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Data Collection
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Data Collection" class="md-nav__link md-nav__link--active">
+      Data Collection
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-data-collection" class="md-nav__link">
+    What is Data Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-data-collection" class="md-nav__link">
+    Benefits of Data Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources-of-data-collection" class="md-nav__link">
+    Sources of Data Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="Sources of Data Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-analytics" class="md-nav__link">
+    Google Analytics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-research-methods" class="md-nav__link">
+    Secondary Research Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Secondary Research Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-trends" class="md-nav__link">
+    Google Trends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buzzfeed" class="md-nav__link">
+    BuzzFeed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buzzsumo" class="md-nav__link">
+    BuzzSumo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyword-planner-google-ads" class="md-nav__link">
+    Keyword Planner (Google Ads)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubersuggest" class="md-nav__link">
+    Ubersuggest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-User-Personas/" title="Building User Personas" class="md-nav__link">
+      Building User Personas
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Building-User-Lifecycle/" title="Building User Journey" class="md-nav__link">
+      Building User Journey
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Strategic-content-map/" title="Strategic Content Map" class="md-nav__link">
+      Strategic Content Map
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      Website Designing
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Website Designing" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Website Designing
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Website-Designing/Introduction/" title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../Website-Designing/UX-and-UI/" title="UI and UX" class="md-nav__link">
+      UI and UX
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-data-collection" class="md-nav__link">
+    What is Data Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benefits-of-data-collection" class="md-nav__link">
+    Benefits of Data Collection
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sources-of-data-collection" class="md-nav__link">
+    Sources of Data Collection
+  </a>
+  
+    <nav class="md-nav" aria-label="Sources of Data Collection">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-analytics" class="md-nav__link">
+    Google Analytics
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secondary-research-methods" class="md-nav__link">
+    Secondary Research Methods
+  </a>
+  
+    <nav class="md-nav" aria-label="Secondary Research Methods">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#google-trends" class="md-nav__link">
+    Google Trends
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buzzfeed" class="md-nav__link">
+    BuzzFeed
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buzzsumo" class="md-nav__link">
+    BuzzSumo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyword-planner-google-ads" class="md-nav__link">
+    Keyword Planner (Google Ads)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ubersuggest" class="md-nav__link">
+    Ubersuggest
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="data-collection"><strong>Data Collection</strong><a class="headerlink" href="#data-collection" title="Permanent link">&para;</a></h1>
+<h2 id="what-is-data-collection"><strong>What is Data Collection</strong><a class="headerlink" href="#what-is-data-collection" title="Permanent link">&para;</a></h2>
+<p>Data collection is the process of gathering and measuring information on targeted variables in an established system, which then enables one to answer relevant questions and evaluate outcomes.</p>
+<p>Data collection is the systematic approach to gathering and measuring information from a variety of sources to get a complete and accurate picture of an area of interest.</p>
+<p>The <strong>goal</strong> for all data collection is to capture quality evidence that allows analysis to lead to the formulation of convincing and credible answers to the questions that have been posed.</p>
+<p>Accurate data collection is essential to maintaining the integrity of research, making informed business decisions and ensuring quality assurance. </p>
+<h2 id="benefits-of-data-collection"><strong>Benefits of Data Collection</strong><a class="headerlink" href="#benefits-of-data-collection" title="Permanent link">&para;</a></h2>
+<p>When conducting research, collecting original data has significant advantages:</p>
+<ul>
+<li>You can tailor data collection to your specific research aims (e.g. understanding the needs of your consumers or user testing your website)</li>
+<li>You can control and standardize the process for high reliability and validity (e.g. choosing appropriate measurements and sampling methods)</li>
+<li>It helps in understanding what is currently trending in your area, what people are more curious about, which keyword will work best at that particular time.</li>
+<li>All the data collected forms an important part of <a href="../Building-User-Personas/">building a user persona</a>.</li>
+</ul>
+<h2 id="sources-of-data-collection"><strong>Sources of Data Collection</strong><a class="headerlink" href="#sources-of-data-collection" title="Permanent link">&para;</a></h2>
+<p>There are multiple sources of data collection. For eg: surveys, questionnaries, interviews and many more. Nowadays, digital tools help in gathering relevant data and information in a more detailed manner. Below, we will discuss a few commonly used sources:</p>
+<h3 id="google-analytics"><strong>Google Analytics</strong><a class="headerlink" href="#google-analytics" title="Permanent link">&para;</a></h3>
+<p>Google Analytics is a free web analytics service/tool offered by Google that tracks/monitor and analyse/reports website traffic. It is the most widely used web analytics service on the web.</p>
+<p><strong>Google Analytics is used to :</strong></p>
+<ul>
+<li>Track website activity based on some parameters of individuals using the site , along with the information on the source of the traffic.</li>
+<li>It shows high level, dashboard type data for the casual user.</li>
+<li>E-commerce tracking can track sales activity and performance.</li>
+</ul>
+<p><strong>Who can view analytics of a Website?</strong></p>
+<p>Access to the analytics being collected for any particular website is limited to those who have login access to the Google Analytics account.</p>
+<p>Once, the access is available, the relevant data can be downloaded in form of Excel sheets.</p>
+<p><strong>What Data does Google Analytics collect?</strong></p>
+<p>At its most basic, Google Analytics can collect a lot of data about how people use a website. For eg:</p>
+<ul>
+<li>Time of visit, pages visited, time spent on each of the webpage.</li>
+<li>Referring site details (such as a URL through which the user reaches the website)</li>
+<li>Type of browser</li>
+<li>Network location and IP Address</li>
+</ul>
+<p>With some custom implementation, additional data can be collected which might include:</p>
+<ul>
+<li>Document downloads</li>
+<li>clicks on links leading to external websites</li>
+<li>errors when users fill out forms</li>
+<li>clicks on videos</li>
+<li>scroll depth</li>
+<li>interactions with site specific widgets.</li>
+</ul>
+<p>With Google's latest version of Google Analytics, even more data which is not limited to websites, can be tracked:</p>
+<ul>
+<li>app activity</li>
+<li>telephone conversations</li>
+<li>Point of sale transactions</li>
+<li>RFID or NFC sensor activity</li>
+</ul>
+<p><strong>How does Google Analytics work?</strong></p>
+<ol>
+<li>Google Analytics works via a “page tag”. The page tag is called the “Google Analytics Tracking Code”, and it is a snippet of JavaScript code.</li>
+<li>This code is added to every page of the website to be tracked. </li>
+<li>When someone visits the website, the tracking code runs in the visitor’s browser, collects visitor data, and sends it to a Google data collection server.</li>
+<li>The usage data is then stored in Google's data collection server.</li>
+</ol>
+<p><strong>How to start tracking users on a website?</strong></p>
+<p>Google Analytics is free to use. All you need are:</p>
+<ul>
+<li>a Google account</li>
+<li>a website to track (and the ability to add the Javascript snippet to that website)</li>
+</ul>
+<blockquote>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://www.mattlane.co.nz/2014/10/09/an-idiots-guide-to-google-analytics/">Guide to Google Analytics</a></p>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://www.analyticsmarket.com/blog/how-google-analytics-works/">How Google Analytics works</a></p>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://www.youtube.com/watch?v=gBeMELnxdIg">Video guide to Google Analytics</a></p>
+</blockquote>
+<h3 id="secondary-research-methods"><strong>Secondary Research Methods</strong><a class="headerlink" href="#secondary-research-methods" title="Permanent link">&para;</a></h3>
+<p>Secondary research is a research method that involves using already existing data. Existing data is summarized and collated to increase the overall effectiveness of research.</p>
+<p>Secondary research is much more cost-effective than primary research, as it makes use of already existing data, unlike primary research where data is collected first hand by organizations or businesses or they can employ a third party to collect data on their behalf.</p>
+<p>There are many popularly used secondary research methods. In this section, we will discuss some of the methods/ tools available on the internet.</p>
+<h4 id="google-trends"><strong>Google Trends</strong><a class="headerlink" href="#google-trends" title="Permanent link">&para;</a></h4>
+<p>Google Trends is a <strong>free</strong> website by Google that analyzes the popularity of top search queries in Google Search across various regions and languages. The website uses graphs to compare the search volume of different queries over time.</p>
+<p>The vast amount of searches — trillions taking place every year — make Google Trends one of the world’s largest real time datasets.</p>
+<p><strong>How is Google Trends useful?</strong></p>
+<ul>
+<li>Google Trends allows the user to compare the relative search volume of searches between two or more terms.</li>
+<li>Examining what people search for provides a unique perspective on what they are currently interested in and curious about.</li>
+<li>It allows users to measure interest in a particular topic across search, from around the globe, right down to city-level geography.</li>
+<li>Data can be filtered in two ways: <strong>Real time</strong> (searches from last 7 days) and <strong>non-real time</strong> (dataset ranging anywhere from 2004 to ~36 hours ago).</li>
+</ul>
+<p><strong>How to access Google Trends?</strong></p>
+<ol>
+<li>Go to -&gt; trends.google.com</li>
+<li>Enter a search term or a topic.</li>
+</ol>
+<p><img alt="google trends" src="../../images/Data-collection/googletrends.jpg" /></p>
+<blockquote>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://medium.com/google-news-lab/what-is-google-trends-data-and-what-does-it-mean-b48f07342ee8">Google Trends Guide</a> - Learn more about Google Trends</p>
+</blockquote>
+<h4 id="buzzfeed"><strong>BuzzFeed</strong><a class="headerlink" href="#buzzfeed" title="Permanent link">&para;</a></h4>
+<p>BuzzFeed is an American Internet media, news and entertainment company with a focus on digital media. The primary focus is on tracking viral media and provide trends across different areas of interest.</p>
+<p><img alt="BuzzFeed" src="../../images/Data-collection/buzzfeed.jpg" /></p>
+<h4 id="buzzsumo"><strong>BuzzSumo</strong><a class="headerlink" href="#buzzsumo" title="Permanent link">&para;</a></h4>
+<p>BuzzSumo is a powerful online tool that allows any user to find out what content is popular by topic or on any website. In order to provide the content that people want to know, you need to know what it popular - this is where BuzzSumo is helpful. It is a paid service.</p>
+<p>BuzzSumo can do the following for any business:</p>
+<ul>
+<li><strong>Content Insights</strong> : Searching across multiple social sites, Buzzsumo gathers information on what topics are gaining the most attention. It analyzes where certain topics are being discussed and how much attention these topics are getting.</li>
+<li><strong>Influencer Information</strong> : Who are the people that others are listening to the most? Who gets more social media shares on their posts? Knowing who has the public’s attention and trust can give you insight on who you need to follow and get on your side.</li>
+<li><strong>Alerts</strong> : Buzzsumo allows you to set up keyword alerts, so you are updated when content is posted or updated. This allows you to be able to know what your next step should be in regards to your own marketing efforts.</li>
+<li><strong>Competitor Analysis</strong> : Knowing what your competitors are doing, and what is working or not working for them, goes a long way in helping you. It helps you avoid ineffective things and gives insight into waht works best and where you stand in comparison to competitors.</li>
+</ul>
+<p><img alt="BuzzSumo" src="../../images/Data-collection/buzzsumo.jpg" /></p>
+<h4 id="keyword-planner-google-ads"><strong>Keyword Planner (Google Ads)</strong><a class="headerlink" href="#keyword-planner-google-ads" title="Permanent link">&para;</a></h4>
+<p>Keywords are words or phrases that are used to match your ads with the terms people are searching for.</p>
+<p>Selecting high quality, relevant keywords for any advertising campaign can help you reach the customers you want, when you want.</p>
+<p>The Google Adwords Keyword planner is an incredibly useful and powerful keyword research. It helps you research keywords for the Search Campaigns.</p>
+<p>Some benefits of the Keyword Planner are as below:</p>
+<ul>
+<li><strong>Discover new keywords</strong> : Get suggestions for keywords related to your products, services, or website.</li>
+<li><strong>See monthly searches</strong> : See estimates on the number of searches a keyword gets each month.</li>
+<li><strong>Determine cost</strong> : See the average cost for your ad to show on searches for a keyword.</li>
+<li><strong>Organize keywords</strong> : See how your keywords fit into different categories related to your brand.</li>
+<li><strong>Create new campaigns</strong> : Use your keyword plan to create new campaigns centered on in-depth keyword research.</li>
+</ul>
+<p><img alt="keyword planner" src="../../images/Data-collection/keywordplanner.jpg" /></p>
+<p>The Keyword functionality is exposed via a wizard-like interface, as shown below:</p>
+<p><img alt="keyword function" src="../../images/Data-collection/keywordp.jpg" /></p>
+<blockquote>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://www.wordstream.com/blog/ws/2013/04/25/keyword-planner">Keyword Planner Tutorial</a></p>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://support.google.com/google-ads/answer/7337243?hl=en">How to use Keyword Planner</a></p>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://www.youtube.com/watch?v=m4SaXPVidWk">Keyword Planner Video Tutorial</a></p>
+</blockquote>
+<h4 id="ubersuggest"><strong>Ubersuggest</strong><a class="headerlink" href="#ubersuggest" title="Permanent link">&para;</a></h4>
+<p>Ubersuggest is a free SEO tool that specializes in generating new keyword ideas.</p>
+<p>Ubersuggest allows you to get insight into the strategies that are working for others in your market so you can adopt them, improve them, and gain an edge.</p>
+<p><img alt="Ubersuggest" src="../../images/Data-collection/ubersuggest.jpg" /></p>
+<p><strong>Key Features</strong></p>
+<ol>
+<li>
+<p><strong>Keyword Ideas</strong> : “Keyword Ideas” is the feature that put the original Ubersuggest on the map. And it still works GREAT.</p>
+<ul>
+<li>To use it, type in a keyword. Ubersuggest will find long tail versions of the term typed.</li>
+<li>These suggestions are great if you are sure about a certain topic.</li>
+<li>
+<p>Ubersuggest can be used to generate different types of keywords, including:</p>
+<ul>
+<li>Related</li>
+<li>Questions</li>
+<li>Prepositions</li>
+<li>Comparisons</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>Keyword Overview</strong> : This tool gives you important data on a keyword that you type into it. So instead of listing out a bunch of ideas, this is like using a magnifying glass on a single term. Here's a breakdown of the info: </p>
+<ul>
+<li>Overview and Search Volume Treand</li>
+<li>Average Backlinks and Domain Score</li>
+<li>Content Ideas</li>
+</ul>
+</li>
+<li>
+<p><strong>Content Ideas</strong> : Although not as feature-rich as a paid BuzzSumo account, it’s helpful for figuring out what’s already working in that space.</p>
+</li>
+<li>
+<p><strong>Traffic Analyser Overview</strong> : Here’s where you can get a sneak peak into a competitor’s SEO efforts. Below information is available on this page:</p>
+<ul>
+<li>Organic Keywords</li>
+<li>Organic Monthly Traffic</li>
+<li>Domain Score</li>
+<li>Backlinks</li>
+<li>Traffic Trend Chart</li>
+<li>SEO Keywords Ranking</li>
+</ul>
+</li>
+<li>
+<p><strong>Top Pages</strong> : This is a list of pages that send a site the most search engine traffic.</p>
+</li>
+<li><strong>Keywords</strong> : This feature is similar to “Top Pages”. But instead of seeing a competitors’ most successful SEO pages, you see the keywords that send them the most traffic.</li>
+<li>
+<p><strong>Site Audit</strong> : This is one of Ubersuggest’s two “SEO Analyzer” features. Like it sounds, Site Audit runs an SEO audit of your website. And gives you recommendations on what’s wrong and how to improve. Here's the break down all of the data that you get in this report:</p>
+<ul>
+<li>Organic Monthly Traffic, Organic Keywords, Backlinks</li>
+<li>On-page SEO Score</li>
+<li>Health Check</li>
+<li>Critical Errors</li>
+<li>Warnings</li>
+<li>Recommendations</li>
+<li>Sitespeed</li>
+<li>Top SEO Issues</li>
+</ul>
+</li>
+<li>
+<p><strong>Backlinks</strong> : Backlinks is the other Ubersuggest “SEO Analyzer” feature. Below is a quick breakdown of the data from this report:</p>
+<ul>
+<li>Overview</li>
+<li>Backlink List</li>
+<li>Filters</li>
+</ul>
+</li>
+<li>
+<p><strong>Dashboard</strong> : This is a feature that you can use to track your organic traffic, setup rank tracking, monitor your links, and more.</p>
+</li>
+</ol>
+<blockquote>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://backlinko.com/hub/seo/ubersuggest">Ubersuggest Tutorial</a></p>
+<p><img alt="💻" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f4bb.svg" title=":computer:" /> <a href="https://www.youtube.com/watch?time_continue=137&amp;v=eXBgXnKGTAw&amp;feature=emb_logo">Ubersuggest Video tutorial</a></p>
+</blockquote>
+                
+                  
+                    
+
+<hr>
+<div class="md-source-date">
+  <small>
+    
+      Last update: August 24, 2020
+    
+  </small>
+</div>
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../Introduction/" title="Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../Building-User-Personas/" title="Building User Personas" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Building User Personas
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

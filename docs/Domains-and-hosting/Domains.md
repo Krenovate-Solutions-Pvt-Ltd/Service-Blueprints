@@ -51,6 +51,9 @@ Domain names work because they provide computer users with a short name that is 
 
 
 ## **URL**
+
+### **What is a URL**
+
 A URL (*__“Uniform Resource Locator”__*) is a complete web address used to reach a particular web destination.
 
 Many times people confuse domain name for URL and vice a versa. But, a domain name is part of a URL. You can see the visual difference in the following examples:
@@ -77,7 +80,7 @@ A URL has four major parts which we will discuss in detail in the next section:
 
 ####    **What is HTTP?**
 
-**HTTP** stands for **H**yper **T**ext **Transfer** **P**rotocol
+**HTTP** stands for **Hyper Text Transfer Protocol**
 
 HTTP is an application protocol that allows communication between different systems. Most commonly, it is used for transferring data from a web server to a browser to view web pages.
 
@@ -99,13 +102,13 @@ HTTP was invented alongside HTML to create the first interactive, text-based web
 
 ####    **What is HTTPs?**
 
-**HTTPs** stands for **H**ypertext **T**ransfer **P**rotocol **S**ecure.
+**HTTPs** stands for **Hypertext Transfer Protocol Secure.**
 
 It is the secure version of HTTP, which is the primary protocol used to send data between a web browser and a website. HTTPS is **encrypted** in order to increase security of data transfer. This is particularly important when users transmit sensitive data, such as by logging into a bank account, email service, or health insurance provider.
 
 HTTPs uses an encryption protocol called **SSL certificates** to encrypt communications.
 
-    **SSL Certificate** - SSL stands for Secure Sockets Layer. SSL Certificate is a data file issued by the authorised Certificate authority. The SSL certificate contains the owner's public key and other details. The web server sends a public key to the browser through an SSL certificate and the browser verifies it and authenticates the web server using the SSL certificate. Any https website will have a padlock Secure in the addressbar, as shown below.
+    **SSL Certificate** - SSL stands for Secure <br> Sockets Layer. SSL Certificate is a data file <br> issued by the authorised Certificate authority.<br> The SSL certificate contains the owner's public key and other details. The web server <br> sends a public key to the browser through an SSL certificate and the browser <br> verifies it and authenticates the web server using the SSL certificate. <br> Any https website will have a padlock Secure in the addressbar, as shown below. <br>
 
 
 ![https](../images/Domain/https.jpg)
